@@ -1,0 +1,50 @@
+positions = '[{\
+        "company": "Freelancer, Chennai, IN",\
+        "postion": "Freelancer Developer",\
+        "startDate": "Apr \'12",\
+        "endDate": "Present",\
+        "description": "Working as Freelancer Developer"\
+    }, {\
+        "company": "TPF Software, Chennai, IN",\
+        "postion": "Technical Lead",\
+        "startDate": "Dec \'18",\
+        "endDate": "Present",\
+        "description": "Working as Technical Lead"\
+    }, {\
+        "company": "TPF Software, Chennai, IN",\
+        "postion": "Principal Engineer",\
+        "startDate": "Jun \'18",\
+        "endDate": "Nov \'18",\
+        "description": "Worked as Principal Engineer"\
+    }, {\
+        "company": "TPF Software, Chennai, IN",\
+        "postion": "Senior Software Engineer",\
+        "startDate": "Oct \'16",\
+        "endDate": "May \'18",\
+        "description": "Worked as Senior Software Engineer"\
+    }, {\
+        "company": "TPF Software, Chennai, IN",\
+        "postion": "Assistant System Engineer",\
+        "startDate": "May \'15",\
+        "endDate": "Sep \'16",\
+        "description": "Worked as Assistant System Engineer"\
+    }, {\
+        "company": "HCL Technologies, Chennai, IN",\
+        "postion": "Software Engineer",\
+        "startDate": "Jan \'14",\
+        "endDate": "May \'15",\
+        "description": "Worked as Software Engineer"\
+    }, {\
+        "company": "KGFSL, Coimbatore, IN",\
+        "postion": "Software Engineer",\
+        "startDate": "Oct \'11",\
+        "endDate": "Jan \'14",\
+        "description": "Worked as Software Engineer"\
+    }, {\
+        "company": "KGISL, Coimbatore, IN",\
+        "postion": "Software Trainee",\
+        "startDate": "Feb \'11",\
+        "endDate": "Sep \'11",\
+        "description": "Worked as Software Trainee"\
+    }\
+]';
