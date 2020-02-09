@@ -10,7 +10,7 @@
     <!-- Meta Description -->
     <meta name="description" content="Profile of Prabhu Prabhakaran" />
     <!-- Meta Keyword -->
-    <meta name="keywords" content="Profile, CV, Prabhu, Prabhakaran" />
+    <meta name="keywords" content="Profile, CV, Prabhu, Prabhakaran, Prabhu Prabhakaran, p.r.c.prabhu, Resume, Chennai, Software, Developer" />
     <!-- meta character set -->
     <meta charset="UTF-8" />
     <!-- Site Title -->
@@ -81,9 +81,11 @@
         </section>
       </div>
       <!-- End banner Area -->
-      <script type="text/javascript" src="assests/positions1.json"></script>
-      <script type="text/javascript" src="assests/skills1.json"></script>
-      <script type="text/javascript" src="js/prabhu.js"></script>
+      <script type="text/javascript" src="assests/prabhu_positions.json"></script>
+      <script type="text/javascript" src="assests/prabhu_skills.json"></script>
+      <script type="text/javascript" src="assests/prabhu_links.json"></script>
+      <script type="text/javascript" src="js/jsondataprovider.js"></script>
+      <script type="text/javascript" src="//wurfl.io/wurfl.js"></script>
       <!-- Start About Area -->
       <div class="section">
         <section class="about-area section-gap">
@@ -105,7 +107,7 @@
                     I'm a blogger, designer, developer and an entrepreneur.
                   </p>
                 </div>
-                <a href="./assests/Prabhu personal Resume.pdf" class="primary-btn" data-text="View Profile">
+                <a href="./assests/prabhu_personal_Resume.pdf" class="primary-btn" data-text="View Profile">
                   <span>P</span>
                   <span>r</span>
                   <span>o</span>
@@ -194,15 +196,13 @@
                     </div>
                   </div>
                   <div class="footer-social">
-                    <div id="copyPhone" style="display: none;">+919677625269</div>
-                    <a href="tel:+919677625269" class="copy-me" rel="copyPhone">
+                    <a href="tel:+919677625269">
                       <i class="fa fa-phone-square"></i>
                     </a>
-                    <a href="whatsapp://send?phone=+919677625269">
-                      <!-- <a href="https://wa.me/919677625269"> -->
-                      <!-- <a href=" https://api.whatsapp.com/send?phone=919677625269"> -->
+                    <a href="#" id="social_whatsapp">
                       <i class="fa fa-whatsapp"></i>
                     </a>
+
                     <a href="skype://prc_prabhu?chat">
                       <i class="fa fa-skype"></i>
                     </a>
@@ -211,18 +211,17 @@
                     </a>
                   </div>
                   <div class="footer-social">
-                    <a href="fb://profile/P.R.C.Prabhu">
+                    <a href="#" id="social_facebook">
                       <i class="fa fa-facebook-square"></i>
                     </a>
-                    <!-- <a href="https://twitter.com/PRC_Prabhu"> -->
-                    <a href="twitter://user?screen_name=PRC_Prabhu">
+                    <a href="#" id="social_twitter">
                       <i class="fa fa-twitter-square"></i>
                     </a>
                     <!-- gplus://plus.google.com/[id] -->
                     <a href="https://en.gravatar.com/prabhuprabhakaran">
                       <i class="fa fa-google fa-rotate-270"></i>
                     </a>
-                    <a href=" linkedin://profile?prabhuprabhakaran">
+                    <a href="#" id="social_linkedin">
                       <i class="fa fa-linkedin-square"></i>
                     </a>
                     <a href="https://www.meetup.com/members/188802025/">
@@ -249,6 +248,19 @@
               </div>
             </div>
           </div>
+          <script>
+            function seturl(id) {
+              if (WURFL.is_mobile === true) {
+                document.getElementById(id).setAttribute("href", mySocialLinks.mobile[id]);
+              } else {
+                document.getElementById(id).setAttribute("href", mySocialLinks.desktop[id]);
+              }
+            }
+            seturl("social_whatsapp");
+            seturl("social_facebook");
+            seturl("social_twitter");
+            seturl("social_linkedin");
+          </script>
         </section>
       </div>
       <!-- End Contact Area -->
@@ -306,78 +318,5 @@
         licenseKey: "IIZnkxAP-qX1Gmk3c-XRm38kqG-bsTqP6f3"
       });
     </script>
-    <script>
-      $(document).on("click", ".copy-me", function(ev) {
-        var $body = document.getElementsByTagName("body")[0];
-        var rel = $(this).attr("rel");
-        var text = $("#" + rel).text();
-        var $tempInput = document.createElement("INPUT");
-        $body.appendChild($tempInput);
-        $tempInput.setAttribute("value", text);
-        $tempInput.select();
-        document.execCommand("copy");
-        $body.removeChild($tempInput);
-      });
-    </script>
-    <!-- <script>
-      var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = "";
-        this.tick();
-        this.isDeleting = false;
-      };
-
-      TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
-
-        if (this.isDeleting) {
-          this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-          this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-
-        this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
-
-        var that = this;
-        var delta = 200 - Math.random() * 100;
-
-        if (this.isDeleting) {
-          delta /= 2;
-        }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-          delta = this.period;
-          this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === "") {
-          this.isDeleting = false;
-          this.loopNum++;
-          delta = 500;
-        }
-
-        setTimeout(function() {
-          that.tick();
-        }, delta);
-      };
-
-      window.onload = function() {
-        var elements = document.getElementsByClassName("typewrite");
-        for (var i = 0; i < elements.length; i++) {
-          var toRotate = elements[i].getAttribute("data-type");
-          var period = elements[i].getAttribute("data-period");
-          if (toRotate) {
-            new TxtType(elements[i], JSON.parse(toRotate), period);
-          }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-        document.body.appendChild(css);
-      };
-    </script> -->
   </body>
 </html>

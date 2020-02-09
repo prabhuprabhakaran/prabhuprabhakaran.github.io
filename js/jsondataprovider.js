@@ -1,10 +1,7 @@
-// import "../assests/positions1.json";
-// import "../assests/skills1.json";
-
-// var positions = require('../assests/positions.json');
-// var AllSkillset = require('../assests/skills.json');
-
 var myPositions = JSON.parse(positions);
+var mySkillset = JSON.parse(skillset);
+var mySocialLinks = JSON.parse(sociallinks);
+
 var myPositionsHTML = '<div class="row">';
 var skillsAppendHTML = "";
 var filtersAppendHTML = '<ul><li id="allSkillsBtn" class="active" data-filter=".all">All</li>';
@@ -42,22 +39,21 @@ for (let i = 0; i < myPositions.length; i++) {
   myPositionsHTML += "</a>" + "</div>" + "</div>" + '<div class="bottom-sec">' + myPositions[i].description + "</div>" + "</div>" + "</div>";
 }
 myPositionsHTML += "</div>";
+//------------------------------------------------------------------------------------//
 
-var AllSkillset = JSON.parse(skillset);
-
-for (let i = 0; i < AllSkillset.skills.length; i++) {
-  for (let j = 0; j < AllSkillset.skills[i].name.length; j++) {
+for (let i = 0; i < mySkillset.skills.length; i++) {
+  for (let j = 0; j < mySkillset.skills[i].name.length; j++) {
     skillsAppendHTML += '<div class="single-work col-lg-3 col-md-6 col-sm-12 ';
-    for (let k = 0; k < AllSkillset.skills[i].tags.length; k++) {
-      skillsAppendHTML += AllSkillset.skills[i].tags[k] + " ";
+    for (let k = 0; k < mySkillset.skills[i].tags.length; k++) {
+      skillsAppendHTML += mySkillset.skills[i].tags[k] + " ";
     }
-    skillsAppendHTML += '">' + '<div class="relative">' + '<div class="thumb">' + "<h4>" + AllSkillset.skills[i].name[j] + "</h4>" + "</div>" + "</div>" + "</div>";
+    skillsAppendHTML += '">' + '<div class="relative">' + '<div class="thumb">' + "<h4>" + mySkillset.skills[i].name[j] + "</h4>" + "</div>" + "</div>" + "</div>";
   }
 }
 
-for (let i = 0; i < AllSkillset.alltags.length; i++) {
-  filtersAppendHTML += '<li data-filter=".' + AllSkillset.alltags[i].name + '">' + AllSkillset.alltags[i].description + "</li>";
+for (let i = 0; i < mySkillset.alltags.length; i++) {
+  filtersAppendHTML += '<li data-filter=".' + mySkillset.alltags[i].name + '">' + mySkillset.alltags[i].description + "</li>";
 }
 filtersAppendHTML += "</ul>";
-
+//------------------------------------------------------------------------------------//
 
