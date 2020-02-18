@@ -12,33 +12,27 @@ for (let i = 0; i < myPositions.length; i++) {
     '<div class="single-job">' +
     '<div class="top-sec d-flex justify-content-between">' +
     '<div class="top-left">' +
-    "<h4>" +
+    "<h5>" +
     myPositions[i].postion +
-    "</h4>" +
-    "<p>" +
+    "</h5>" +
     myPositions[i].company +
-    "</p>" +
-    "</div>" +
-    '<div class="top-right">' +
-    '<a href="#" class="primary-btn" data-text="' +
+    "<br/>" +
+    "<b>" +
     myPositions[i].startDate +
     " to " +
     myPositions[i].endDate +
-    '">';
-
-  var chars = myPositions[i].startDate.split("");
-  for (let j = 0; j < chars.length; j++) {
-    myPositionsHTML += "<span>" + chars[j] + "</span>";
-  }
-  myPositionsHTML += "<span>&nbsp;t</span>" + "<span>o&nbsp;</span>";
-
-  chars = myPositions[i].endDate.split("");
-  for (let j = 0; j < chars.length; j++) {
-    myPositionsHTML += "<span>" + chars[j] + "</span>";
-  }
-  myPositionsHTML += "</a>" + "</div>" + "</div>" + '<div class="bottom-sec">' + myPositions[i].description + "</div>" + "</div>" + "</div>";
+    "</b>" +
+    "</div>" +
+    '<div class="top-right">' +
+    '<div class="pull-right"><img src="'+myPositions[i].image+'" width=100/></div>' +
+    "</div>" +
+    "</div>" +
+    '<div class="bottom-sec">' +
+    myPositions[i].description +
+    "</div>" +
+    "</div>" +
+    "</div>";
 }
-myPositionsHTML += "</div>";
 //------------------------------------------------------------------------------------//
 
 for (let i = 0; i < mySkillset.skills.length; i++) {
@@ -56,4 +50,3 @@ for (let i = 0; i < mySkillset.alltags.length; i++) {
 }
 filtersAppendHTML += "</ul>";
 //------------------------------------------------------------------------------------//
-

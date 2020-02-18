@@ -1,47 +1,69 @@
 positions = '[{\
         "company": "Freelancer, Chennai, IN",\
+        "image" : "img/freelancer.png",\
         "postion": "Freelancer Developer",\
         "startDate": "Apr \'12",\
         "endDate": "Present",\
         "description": "Working as Freelancer Developer"\
     }, {\
         "company": "TPF Software, Chennai, IN",\
+        "image" : "img/tpf.png",\
         "postion": "Technical Lead",\
         "startDate": "Dec \'18",\
         "endDate": "Present",\
         "description": "Working as Technical Lead"\
     }, {\
         "company": "TPF Software, Chennai, IN",\
+        "image" : "img/tpf.png",\
         "postion": "Principal Engineer",\
         "startDate": "Jun \'18",\
         "endDate": "Nov \'18",\
         "description": "Worked as Principal Engineer"\
     }, {\
         "company": "TPF Software, Chennai, IN",\
+        "image" : "img/tpf.png",\
         "postion": "Senior Software Engineer",\
         "startDate": "Oct \'16",\
         "endDate": "May \'18",\
         "description": "Worked as Senior Software Engineer"\
     }, {\
         "company": "TPF Software, Chennai, IN",\
-        "postion": "Assistant System Engineer",\
+        "image" : "img/tpf.png",\
+        "postion": "Assistant Systems Engineer",\
         "startDate": "May \'15",\
         "endDate": "Sep \'16",\
-        "description": "Worked as Assistant System Engineer"\
+        "description": "Worked as Assistant Systems Engineer"\
     }, {\
         "company": "HCL Technologies, Chennai, IN",\
+        "image" : "img/hcl.png",\
         "postion": "Software Engineer",\
         "startDate": "Jan \'14",\
         "endDate": "May \'15",\
         "description": "Worked as Software Engineer"\
     }, {\
         "company": "KGFSL, Coimbatore, IN",\
+        "image" : "img/kgfsl.png",\
         "postion": "Software Engineer",\
-        "startDate": "Oct \'11",\
+        "startDate": "May \'13",\
         "endDate": "Jan \'14",\
         "description": "Worked as Software Engineer"\
+    },{\
+        "company": "KGFSL, Coimbatore, IN",\
+        "image" : "img/kgfsl.png",\
+        "postion": "Junior Software Engineer",\
+        "startDate": "May \'12",\
+        "endDate": "Apr \'13",\
+        "description": "Worked as Junior Software Engineer"\
+    },{\
+        "company": "KGFSL, Coimbatore, IN",\
+        "image" : "img/kgfsl.png",\
+        "postion": "Software Engineer Probation",\
+        "startDate": "Oct \'11",\
+        "endDate": "Apr \'12",\
+        "description": "Worked as Software Engineer Probation"\
     }, {\
         "company": "KGISL, Coimbatore, IN",\
+        "image" : "img/kgisl.png",\
         "postion": "Software Trainee",\
         "startDate": "Feb \'11",\
         "endDate": "Sep \'11",\
