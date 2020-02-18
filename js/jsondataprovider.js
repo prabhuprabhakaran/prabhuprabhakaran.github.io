@@ -10,8 +10,8 @@ for (let i = 0; i < myPositions.length; i++) {
   myPositionsHTML +=
     '<div class="col-lg-6">' +
     '<div class="single-job">' +
-    '<div class="top-sec d-flex justify-content-between">' +
-    '<div class="top-left">' +
+    '<div class="top-sec row d-flex justify-content-between">' +
+    '<div class="col col-sm-8 col-md-8 col-lg-8 col-xl-8">' +
     "<h5>" +
     myPositions[i].postion +
     "</h5>" +
@@ -23,12 +23,9 @@ for (let i = 0; i < myPositions.length; i++) {
     myPositions[i].endDate +
     "</b>" +
     "</div>" +
-    '<div class="top-right">' +
+    '<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">' +
     '<div class="pull-right"><img src="'+myPositions[i].image+'" width=100/></div>' +
     "</div>" +
-    "</div>" +
-    '<div class="bottom-sec">' +
-    myPositions[i].description +
     "</div>" +
     "</div>" +
     "</div>";
