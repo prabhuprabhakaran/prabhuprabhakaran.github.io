@@ -47,7 +47,7 @@ skillset='{\
             "name": ["Blackberry", "Android (Java)", "Cordova", "Flutter"],\
             "tags": ["all", "mobile"]\
         }, {\
-            "name": ["Fix&Fast", "EDI", "HL7", "ISO8583", "Swift MT", "SECS/GEM"],\
+            "name": ["Fix&Fast", "EDI", "HL7", "ISO8583", "Swift MT", "SECS/GEM", "Swagger"],\
             "tags": ["all", "other"]\
         }, {\
             "name": ["Tomcat", "Jetty", "ActiveMQ", "JBoss/Wildfly", "Junit", "JMeter", "NSIS"],\
