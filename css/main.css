@@ -4319,3 +4319,17 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /*# sourceMappingURL=main.css.map */
+.fp-tableCell {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  height: inherit !important;
+}
+
+.fp-controlArrow.fp-next {
+  border-color: transparent transparent transparent #e45649 !important;
+}
+.fp-controlArrow.fp-prev {
+  border-color: transparent #e45649 transparent transparent !important;
+}
