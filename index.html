@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -38,6 +38,11 @@
 
       gtag("config", "UA-158737439-1");
     </script>
+    <script type="text/javascript" src="//wurfl.io/wurfl.js"></script>
+    <script type="text/javascript" src="assests/prabhu_positions.json"></script>
+    <script type="text/javascript" src="assests/prabhu_skills.json"></script>
+    <script type="text/javascript" src="assests/prabhu_links.json"></script>
+    <script type="text/javascript" src="js/jsondataprovider.js"></script>
   </head>
   <body>
     <!-- Start Preloader Area -->
@@ -96,18 +101,18 @@
                 </div>
               </div>
               <div class="banner-img col-lg-6 col-md-6 align-self-end">
-                <img class="img-fluid" src="img/banner-img.png" alt="" />
+                <img id="banner_image" class="img-fluid" src="image_name" alt="" />
+                <script>
+                  var image_name = "img/banner-img-" + getImageNumber() + ".png";
+                  document.getElementById("banner_image").src = image_name;
+                </script>
               </div>
             </div>
           </div>
         </section>
       </div>
       <!-- End banner Area -->
-      <script type="text/javascript" src="//wurfl.io/wurfl.js"></script>
-      <script type="text/javascript" src="assests/prabhu_positions.json"></script>
-      <script type="text/javascript" src="assests/prabhu_skills.json"></script>
-      <script type="text/javascript" src="assests/prabhu_links.json"></script>
-      <script type="text/javascript" src="js/jsondataprovider.js"></script>
+
       <!-- Start About Area -->
       <div class="section">
         <section class="about-area section-gap">
@@ -163,7 +168,7 @@
               </div>
             </div>
             <div class="filters-content">
-              <div  class="row grid" id="Myskills"></div>
+              <div class="row grid" id="Myskills"></div>
               <script>
                 document.getElementById("Myskills").innerHTML = skillsAppendHTML;
               </script>
