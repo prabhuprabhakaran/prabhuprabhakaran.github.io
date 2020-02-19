@@ -4327,9 +4327,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   height: inherit !important;
 }
 
-.fp-controlArrow.fp-next {
-  border-color: transparent transparent transparent #e45649 !important;
-}
-.fp-controlArrow.fp-prev {
-  border-color: transparent #e45649 transparent transparent !important;
+.fp-bottom {
+  text-align: center;
 }
