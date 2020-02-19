@@ -5,24 +5,25 @@ var mySocialLinks = JSON.parse(sociallinks);
 var myPositionsHTML = "";
 var skillsAppendHTML = "";
 var filtersAppendHTML = '<ul><li id="allSkillsBtn" class="active" data-filter=".all">All</li>';
-let slideStart = false;
-let count = 4;
+let positionSlideStart = false;
+let skillsSlideStart = false;
+let position_count = 4;
+let skills_count = 24;
+let skill_filter = "all";
 if (WURFL.is_mobile === true) {
-  count = 3;
+  position_count = 3;
+  skills_count = 9;
 }
-console.log(myPositions.length);
 for (let i = 0; i < myPositions.length; i++) {
-  if (i % count == 0) {
-    slideStart = true;
-    console.log("SLIDE START");
+  if (i % position_count == 0) {
+    positionSlideStart = true;
     myPositionsHTML += '<div class="slide"><div class="row">';
   }
-  console.log(i);
   myPositionsHTML +=
     '<div class="col-lg-6">' +
     '<div class="single-job">' +
-    '<div class="top-sec row d-flex justify-content-between">' +
-    '<div class="col col-sm-8 col-md-8 col-lg-8 col-xl-8">' +
+    '<div class="row d-flex justify-content-between">' +
+    '<div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">' +
     "<h5>" +
     myPositions[i].postion +
     "</h5>" +
@@ -34,7 +35,7 @@ for (let i = 0; i < myPositions.length; i++) {
     myPositions[i].endDate +
     "</b>" +
     "</div>" +
-    '<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">' +
+    '<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">' +
     '<div class="pull-right"><img src="' +
     myPositions[i].image +
     '" width=100/></div>' +
@@ -42,28 +43,43 @@ for (let i = 0; i < myPositions.length; i++) {
     "</div>" +
     "</div>" +
     "</div>";
-  if (slideStart && i % count == count - 1) {
-    console.log("SLIDE END");
+  if (positionSlideStart && i % position_count == position_count - 1) {
     myPositionsHTML += "</div></div>";
-    slideStart = false;
+    positionSlideStart = false;
   }
-  if (slideStart && i == myPositions.length - 1) {
-    console.log("SLIDE END 1");
+  if (positionSlideStart && i == myPositions.length - 1) {
     myPositionsHTML += "</div></div>";
   }
 }
 // myPositionsHTML += "";
 //------------------------------------------------------------------------------------//
-
-for (let i = 0; i < mySkillset.skills.length; i++) {
-  for (let j = 0; j < mySkillset.skills[i].name.length; j++) {
-    skillsAppendHTML += '<div class="single-work col-lg-3 col-md-6 col-sm-12 ';
-    for (let k = 0; k < mySkillset.skills[i].tags.length; k++) {
-      skillsAppendHTML += mySkillset.skills[i].tags[k] + " ";
+function generateFilteredSkills() {
+  let skill_index = 0;
+  for (let i = 0; i < mySkillset.skills.length; i++) {
+    if (mySkillset.skills[i].tags.includes(skill_filter)) {
+      for (let j = 0; j < mySkillset.skills[i].name.length; j++) {
+        if (skill_index % skills_count == 0) {
+          skillsSlideStart = true;
+          // skillsAppendHTML += '<div class="slide"> <div class="row grid">';
+        }
+        skillsAppendHTML += '<div class="single-work col-6 col-xl-3 col-lg-3 col-md-4 col-sm-6 ';
+        for (let k = 0; k < mySkillset.skills[i].tags.length; k++) {
+          skillsAppendHTML += mySkillset.skills[i].tags[k] + " ";
+        }
+        skillsAppendHTML += '">' + '<div class="relative">' + '<div class="thumb">' + "<h4>" + mySkillset.skills[i].name[j] + "</h4>" + "</div>" + "</div>" + "</div>";
+        skill_index++;
+        if (skillsSlideStart && skill_index % skills_count == 0) {
+          // skillsAppendHTML += "</div> </div>";
+          skillsSlideStart = false;
+        }
+      }
     }
-    skillsAppendHTML += '">' + '<div class="relative">' + '<div class="thumb">' + "<h4>" + mySkillset.skills[i].name[j] + "</h4>" + "</div>" + "</div>" + "</div>";
+    if (skillsSlideStart && i == mySkillset.skills.length - 1) {
+      // skillsAppendHTML += "</div> </div>";
+    }
   }
 }
+generateFilteredSkills();
 
 for (let i = 0; i < mySkillset.alltags.length; i++) {
   filtersAppendHTML += '<li data-filter=".' + mySkillset.alltags[i].name + '">' + mySkillset.alltags[i].description + "</li>";

@@ -2822,7 +2822,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 @media (max-width: 991px) {
   .work-area .filters {
-    margin-top: 40px;
+    /* margin-top: 40px; */
   }
 }
 .work-area .filters ul {
