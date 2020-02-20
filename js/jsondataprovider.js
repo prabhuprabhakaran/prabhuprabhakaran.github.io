@@ -105,6 +105,9 @@ function getCookie(cname) {
 
 function getImageNumber() {
   let image_number = parseInt(getCookie("image_number"));
+  if (!image_number) {
+    image_number = 0;
+  }
   if (image_number == 99) {
     image_number = 0;
   }
