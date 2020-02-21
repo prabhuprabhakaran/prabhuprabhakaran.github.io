@@ -4353,3 +4353,48 @@ body.mobile-nav-active #mobile-nav-toggle {
     opacity: 0;
   }
 }
+
+@keyframes MoveUpDown {
+  0% {
+    bottom: 10px;
+  }
+  5% {
+    bottom: 10px;
+  }
+  5% {
+    bottom: 0;
+  }
+}
+.mouse {
+  animation: MoveUpDown 2s linear infinite;
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+}
+.saturate {
+  filter: saturate(3);
+}
+.grayscale {
+  filter: grayscale(100%);
+}
+.contrast {
+  filter: contrast(160%);
+}
+.brightness {
+  filter: brightness(0.25);
+}
+.blur {
+  filter: blur(3px);
+}
+.invert {
+  filter: invert(100%);
+}
+.sepia {
+  filter: sepia(100%);
+}
+.huerotate {
+  filter: hue-rotate(180deg);
+}
+.rss.opacity {
+  filter: opacity(50%);
+}

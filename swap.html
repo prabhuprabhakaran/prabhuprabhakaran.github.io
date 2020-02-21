@@ -30,12 +30,32 @@
           opacity: 0;
         }
       }
+      @keyframes MoveUpDown {
+        0% {
+          bottom: 10px;
+        }
+        5% {
+          bottom: 10px;
+        }
+        5% {
+          bottom: 0;
+        }
+      }
+      .mouse {
+        animation: MoveUpDown 2s linear infinite;
+        position: absolute;
+        left: 50%;
+        bottom: 5%;
+      }
     </style>
   </head>
-  <body>
-    <div>
+  <body bgcolor="#E6E6FA">
+    <section>
       <img class="bottom" src="img/banner-img-0.png" width="500" />
       <img class="top" src="img/banner-img-2.png" width="500" />
-    </div>
+    </section>
+    <a id="mouseScroll" href="#">
+      <img class="lazy mouse" alt="scroll" title="Scroll" src="img/mouse_icon.png" />
+    </a>
   </body>
 </html>
