@@ -3,11 +3,17 @@ skillset='{\
             "name": "lang",\
             "description": "Languages"\
         }, {\
+            "name": "ui",\
+            "description": "UI"\
+        }, {\
             "name": "database",\
             "description": "Database"\
         }, {\
             "name": "frame",\
             "description": "Frameworks"\
+        }, {\
+            "name": "os",\
+            "description": "Operating Systems"\
         }, {\
             "name": "mobile",\
             "description": "MobileTechnologies"\
@@ -23,8 +29,20 @@ skillset='{\
         }\
     ],\
     "skills": [{\
-            "name": ["Java(J2se/J2ee)", "JSP/Servlets", "JavaScript", "JQuery", "Angular (7 & 8)", "Angularjs", "PHP", "Shell", "Batch", "Dart", "Python"],\
+            "name": ["Java(J2se/J2ee)", "Shell (Linux)", "Batch (Windows)", "Dart", "Python", "XML","YAML"],\
             "tags": ["all", "lang"]\
+        }, {\
+            "name": [ "XML","YAML"],\
+            "tags": ["all", "lang", "other"]\
+        }, {\
+            "name": [ "JavaScript", "PHP",  "Dart", "CSS", "HTML"],\
+            "tags": ["all", "lang","ui"]\
+        }, {\
+            "name": ["JSP/Servlets","JQuery", "Angular (7 & 8)", "Angularjs"],\
+            "tags": ["all","lang", "frame","ui"]\
+        }, {\
+            "name": ["Windows", "Linux", "Android"],\
+            "tags": ["all", "os"]\
         }, {\
             "name": ["Struts", "Spring", "Yii", "Hibernate", "nodejs"],\
             "tags": ["all", "frame"]\
@@ -32,22 +50,20 @@ skillset='{\
             "name": ["Oracle", "MySql", "Hsqldb", "Sqlite", "Derby", "Postgres", "Mongo"],\
             "tags": ["all", "database"]\
         }, {\
-            "name": ["Netbeans RCP", "Eclipse RCP", "Swing Application Framework"],\
-            "tags": ["all", "frame", "other"]\
+            "name": ["Netbeans RCP", "Eclipse RCP/SWT", "Swing Application Framework"],\
+            "tags": ["all", "frame", "ui", "other"]\
         }, {\
             "name": ["VSS", "SVN", "GIT", "ANT", "Maven", "Jenkins", "Docker", "Gradle", "Ansible", "JIRA"],\
             "tags": ["all", "tools", "devops"]\
         }, {\
-            "name": ["JMX", "JMS", "TCP", "UDP", "NIO", "SOAP", "REST", "Lucene", "Hazelcast", "ETL (Clover & Pentaho)", "JBPM", "DROOLS"],\
-            "tags": ["all", "other"]\
-        }, {\
             "name": ["AWS EC2", "AWS Lambda", "AWS SNS", "AWS S3", "AWS API Gateway", "AWS Route53"],\
             "tags": ["all", "cloud"]\
         }, {\
-            "name": ["Blackberry", "Android (Java)", "Cordova", "Flutter"],\
+            "name": ["Blackberry", "Android SDK (Java)", "Android NDK", "Cordova", "Flutter"],\
             "tags": ["all", "mobile"]\
         }, {\
-            "name": ["Fix&Fast", "EDI", "HL7", "ISO8583", "Swift MT", "SECS/GEM", "Swagger"],\
+            "name": ["JMX", "JMS", "TCP", "UDP", "NIO", "SOAP", "REST", "Lucene", "Hazelcast", "ETL (Clover & Pentaho)",\
+                 "JBPM", "DROOLS","JSON","MONO","Fix&Fast", "EDI", "HL7", "ISO8583", "Swift MT", "SECS/GEM", "Swagger"],\
             "tags": ["all", "other"]\
         }, {\
             "name": ["Tomcat", "Jetty", "ActiveMQ", "JBoss/Wildfly", "Junit", "JMeter", "NSIS"],\

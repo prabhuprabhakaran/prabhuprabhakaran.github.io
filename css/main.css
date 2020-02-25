@@ -981,7 +981,7 @@ th {
 .section-title h2 {
   font-size: 48px;
   font-weight: 700;
-  margin-bottom: 70px;
+  /* margin-bottom: 70px; */
   text-transform: capitalize;
   position: relative;
   line-height: 44px;
