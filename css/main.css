@@ -981,7 +981,7 @@ th {
 .section-title h2 {
   font-size: 48px;
   font-weight: 700;
-  /* margin-bottom: 70px; */
+  margin-bottom: 70px;
   text-transform: capitalize;
   position: relative;
   line-height: 44px;
@@ -2927,7 +2927,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 .job-area.offwhite {
   background: #f9f9ff;
 }
-
+.job-area .section-title h2 {
+  color: #fff;
+}
+.job-area .section-title h2:before {
+  background: white;
+}
+.job-area .section-title h2::after {
+  background: white;
+}
 .single-job {
   background-color: #f9f9ff;
   padding: 40px 30px;
