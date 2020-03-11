@@ -121,3 +121,24 @@ for (let i = 0; i < mySkillset.alltags.length; i++) {
 }
 filtersAppendHTML += "</ul>";
 //------------------------------------------------------------------------------------//
+function timeSince(date_future) {
+  var d = Math.abs(date_future - new Date()) / 1000; // delta
+  var r = {}; // result
+  var s = {
+    // structure
+    year: 31536000,
+    month: 2592000,
+    week: 604800, // uncomment row to ignore
+    day: 86400, // feel free to add your own row
+    hour: 3600,
+    minute: 60,
+    second: 1
+  };
+
+  Object.keys(s).forEach(function(key) {
+    r[key] = Math.floor(d / s[key]);
+    d -= r[key] * s[key];
+  });
+
+  return r;
+}
