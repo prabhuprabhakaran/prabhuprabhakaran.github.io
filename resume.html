@@ -21,40 +21,8 @@
     <!--=============================================CSS============================================= -->
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/animate.min.css" />
-    <link rel="stylesheet" href="css/resume.css" />
-    <style>
-        body {
-            background: rgb(204, 204, 204);
-        }
-
-        page {
-            background: white;
-            display: block;
-            margin: 0 auto;
-            margin-bottom: 0.5cm;
-            box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
-        }
-
-        page[size="A4"] {
-            width: 21cm;
-            height: 29.7cm;
-        }
-
-        page[size="A4"][layout="portrait"] {
-            width: 29.7cm;
-            height: 21cm;
-        }
-
-        @media print {
-
-            body,
-            page {
-                margin: 0;
-                box-shadow: 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/resume_page.css" />
     <script type="text/javascript" src="js/jsondataprovider.js"></script>
 </head>
 
@@ -64,14 +32,14 @@
         <div class="row">
             <div class="col">
                 <div class="card shadow-sm bg-light rounded">
-                    <div class="card-body">
+                    <div class="card-body pb-10">
                         <div class="row">
                             <div class="col col-md-8">
-                                <h4 class="card-title">PRABHU PRABHAKARAN</h4>
-                                <h6 class="card-subtitle mb-2 text-muted">Technical Lead, TPF Software, Chennai, IN</h6>
+                                <h5 class="card-title">PRABHU PRABHAKARAN</h5>
+                                <h6 class="card-subtitle text-muted">Technical Lead, TPF Software, Chennai, IN</h6>
                                 <h6 class="text-muted" id="experience"></h6>
                             </div>
-                            <div class="col col-md-4">
+                            <div class="col-md-4">
                                 <div class="pull-right">
                                     <a href="mailto:p.r.c.prabhu@gmail.com" class="fa fa-envelope card-link"></a>
                                     <a href="tel:+919677625269" class="fa fa-phone card-link"></a>
@@ -91,40 +59,179 @@
             document.getElementById("experience").innerHTML = "Experience: " + exp.year + " Years, " + exp.month + " Months";
         </script>
         <div class="row" style="margin: 10px; min-height: 43%;">
-            <div class="col-md-8">
-                <div class="row">
-                    <h6><strong>Work Experience</strong></h6><br />
+            <div class="col col-md-10">
+                <!-- WORK Experience -->
+                <div class="row text-black">
+                    <strong>Summary</strong>
                 </div>
                 <div class="row">
-
-                    <div>
-                        <strong>TPF Software India P Ltd <span class="badge badge-primary"><i> May 2015 – Till Now</i></span></strong> <br />
-                        <!-- <i>Technical Lead from Dec 2018 – Till Now</i><br />
-                        <i>Principal Engineer from Jun 2018 – Nov 2018</i><br />
-                        <i>Senior Software Engineer from Oct 2016 – May 2018</i><br />
-                        <i>Assistant Systems Engineer from May 2015 – Sep 2016</i><br /> -->
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col">
+                                <ul style="list-style-type:circle">
+                                    <li> 9+ Years of Comprehensive Experience in IT Industry with phenomenal programming skills in Java and Open Source.</li>
+                                    <li> Worked in various domains such as BFSI/ERS/Healthcare/SDLC.</li>
+                                    <li> Flexible, easy learner and versatile and to any new condition and work on any environment.</li>
+                                    <li> Exposure to all phase in Software Development Life Cycle (SDLC)</li>
+                                    <li> Good cooperative person with great correspondence, self-learning and relational aptitudes</li>
+                                    <li> Having good understanding in Software Development Life Cycle (SDLC) and experienced with agile process and new project from base.</li>
+                                    <li> Strong experience in requirement, analysis, design, development, modelling, reviewing, application performance tuning, and unit/integration/performance testing.</li>
+                                    <li> Strong working knowledge of micro services, even driven, monolith and API Architectures</li>
+                                    <li> Motivates technical team to meet their development goals.</li>
+                                    <li> Able to deal with multiple roles in parallel and extends and adaptable with new technology in quick turnaround.</li>
+                                    <li> Always like to take challenging environment, tasks & responsibilities that could utilize my skills towards the growth and achievement.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <strong>HCL Technologies <span class="badge badge-secondary"><i> Jan 2014 – May 2015</i></span></strong> <br />
-                        <!-- <i>Software Engineer from Jan 2014 – May 2015</i><br /> -->
+                </div>
+                <div class="row">
+                    <div class="col col-md-8">
+                        <div class="row pt-10 text-black">
+                            <strong>Work Experience</strong>
+                        </div>
+                        <div class="row">
+                            <div class="col ">
+                                <div class="row">
+                                    <div class="col col-md-8">
+                                        <strong>TPF Software India P Ltd, Chennai, IN </strong>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <span class="badge badge-primary"><i>May 2015 – Till Now</i></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col col-md-8">
+                                        <strong>HCL Technologies, Chennai, IN </strong>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <span class="badge badge-secondary"><i>Jan 2014 – May 2015</i></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col col-md-8">
+                                        <strong>KG Financial Software P Ltd, Coimbatore, IN </strong>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <span class="badge badge-secondary"><i>Oct 2011 – Jan 2014</i></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col col-md-8">
+                                        <strong>KG Information Systems P Ltd. Coimbatore, IN </strong>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <span class="badge badge-secondary"><i>Feb 2011 – Jun 2011</i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row text-black pt-10">
+                            <strong>Onsite Experience</strong>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col col-md-8">
+                                        <strong>Travelport, Denver, CO, USA</strong>
+                                        for Tech and Business Discussions
+                                    </div>
+                                    <div class="col-md-4">
+                                        <span class="badge badge-primary"><i>2017 & 2018</i></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col col-md-8">
+                                        <strong>MRKT.inc, Miami, FL, USA</strong>
+                                        for Implementation
+                                    </div>
+                                    <div class="col-md-4">
+                                        <span class="badge badge-primary"><i>2017</i></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col col-md-8">
+                                        <strong>KLA-Tencor, Milpitas, CA, USA</strong>
+                                        for Implementation
+                                    </div>
+                                    <div class="col-md-4">
+                                        <span class="badge badge-primary"><i>2014</i></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col col-md-8">
+                                        <strong>HSBC, Mumbai</strong>
+                                        for Support and Implementation
+                                    </div>
+                                    <div class="col-md-4">
+                                        <span class="badge badge-primary"><i>2012</i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row text-black pt-10">
+                            <strong>Educational Qualification</strong>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col col-md-8">
+                                        <strong>Bachelor of Engineering, Annamalai University </strong>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <span class="badge badge-primary"><i>2006 – 2010</i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row text-black pt-10">
+                            <strong>OpenSource Contribution</strong>
+                        </div>
+                        <ul>
+                            <li> <a href="https://www.npmjs.com/package/g-spreadsheet-sql">https://www.npmjs.com/package/g-spreadsheet-sql</a></li>
+                            <li> <a href="https://www.npmjs.com/package/aws-lambda-sync">https://www.npmjs.com/package/aws-lambda-sync</a></li>
+                        </ul>
                     </div>
-                    <div>
-                        <strong>KG Financial Software P Ltd <span class="badge badge-secondary"><i> Oct 2011 – Jan 2014</i></span></strong> <br />
-                        <!-- <i>Software Engineer from May 2011 – Jan 2014</i><br />
-                        <i>Junior Software Engineer from May 2012 – Apr 2013</i><br />
-                        <i>Probational Software Engineer from Oct 2011 – Apr 2012</i><br /> -->
-                    </div>
-                    <div>
-                        <strong>KG Information Systems P Ltd <span class="badge badge-secondary"><i> Feb 2011 – Jun 2011</i></span></strong> <br />
-                        <!-- <i>Software Trainee from February 2011 – June 2011</i><br /> -->
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-12 pt-40">
+                                <div class="border border-primary rounded">
+                                    <div class="p-2">
+                                        <div> <strong class="text-black">Clients : </strong>
+                                            <span class="badge badge-success"> HSBC</span>
+                                            <span class="badge badge-success"> AMEX</span>
+                                            <span class="badge badge-success"> Hawes</span>
+                                            <span class="badge badge-success"> Travelport</span>
+                                            <span class="badge badge-success"> KLA-Tencor</span>
+                                        </div>
+                                        <div><strong class="text-black"> Domains:</strong>
+                                            <span class="badge badge-warning"> BFSI</span>
+                                            <span class="badge badge-warning"> Engineering</span>
+                                            <span class="badge badge-warning"> Healthcare</span>
+                                            <span class="badge badge-warning"> Airlines</span>
+                                            <span class="badge badge-warning"> SDLC</span>
+                                        </div>
+                                        <div><strong class="text-black"> Enviromnents:</strong>
+                                            <span class="badge badge-info"> Products</span>
+                                            <span class="badge badge-info"> Services</span>
+                                        </div>
+                                        <div><strong class="text-black"> Methodologies:</strong>
+                                            <span class="badge badge-danger"> Agile / Scrum / Kanban</span>
+                                            <span class="badge badge-danger"> Waterfall</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4" style="background: lightgrey; color:black">
-                <strong>Skills</strong><br />
-                <span class="badge badge-primary">Android SDK/NDK</span>
-                <span class="badge badge-primary">Angular</span>
+            <div class="col-md-2 mt-20 p-2 border border-primary rounded">
+                <strong class="text-black">Skills</strong><br />
                 <span class="badge badge-primary">Java</span>
+                <span class="badge badge-primary">Android SDK/NDK</span>
+                <span class="badge badge-primary">Blackberry SDK</span>
+                <span class="badge badge-primary">Angular</span>
                 <span class="badge badge-primary">CSS</span>
                 <span class="badge badge-primary">JQuery</span>
                 <span class="badge badge-primary">nodejs</span>
@@ -134,32 +241,46 @@
                 <span class="badge badge-primary">JavaScript</span>
                 <span class="badge badge-primary">PHP</span>
                 <br />
+                <span class="badge badge-dark">Oracle</span>
+                <span class="badge badge-dark">Mysql</span>
+                <span class="badge badge-dark">Postgres</span>
+                <span class="badge badge-dark">Mongo</span>
+                <span class="badge badge-dark">HsqlDB</span>
+                <span class="badge badge-dark">Sqlite</span>
+                <span class="badge badge-dark">Derby</span>
+                <br />
+                <span class="badge badge-info">Apache Projects</span>
+                <span class="badge badge-info">ETL</span>
                 <span class="badge badge-info">BPM</span>
+                <span class="badge badge-info">Drools</span>
                 <span class="badge badge-info">JMS</span>
                 <span class="badge badge-info">JMX</span>
-                <span class="badge badge-info">Lucene</span>
-                <span class="badge badge-info">Spring</span>
-                <span class="badge badge-info">Swagger</span>
-                <span class="badge badge-info">JSP/Servlets</span>
-                <span class="badge badge-info">JMeter</span>
-                <span class="badge badge-info">Yii</span>
+                <span class="badge badge-info">TCP/UDP/NIO</span>
                 <span class="badge badge-info">Struts</span>
+                <span class="badge badge-info">Spring</span>
+                <span class="badge badge-info">JSP/Servlets</span>
                 <span class="badge badge-info">Hazelcast</span>
+                <span class="badge badge-info">Lucene</span>
                 <span class="badge badge-info">Hibernate</span>
+                <span class="badge badge-info">Swagger</span>
                 <span class="badge badge-info">SOAP/REST</span>
                 <span class="badge badge-info">Thick Client RCP</span>
+                <span class="badge badge-info">Yii</span>
                 <br />
                 <span class="badge badge-success">Ansible</span>
                 <span class="badge badge-success">ANT</span>
                 <span class="badge badge-success">Gradle</span>
                 <span class="badge badge-success">Maven</span>
                 <span class="badge badge-success">Docker</span>
+                <span class="badge badge-success">Mono</span>
                 <span class="badge badge-success">GIT</span>
-                <span class="badge badge-success">Linux</span>
+                <span class="badge badge-success">SVN</span>
+                <span class="badge badge-success">Linux Services</span>
                 <span class="badge badge-success">Windows Services</span>
                 <span class="badge badge-success">NSIS</span>
                 <span class="badge badge-success">Jenkins</span>
                 <span class="badge badge-success">JIRA</span>
+                <span class="badge badge-success">JMeter</span>
                 <br />
                 <span class="badge badge-warning">Design Patterns</span>
                 <span class="badge badge-warning">Design Principles</span>
@@ -176,17 +297,14 @@
                 <span class="badge badge-secondary">AWS API Gateway</span>
                 <span class="badge badge-secondary">AWS EC2</span>
                 <span class="badge badge-secondary">AWS Lambda</span>
-                <span class="badge badge-secondary">AWS Route53 </span>
+                <span class="badge badge-secondary">AWS Route53</span>
                 <span class="badge badge-secondary">AWS S3</span>
                 <span class="badge badge-secondary">AWS SNS</span>
             </div>
         </div>
     </page>
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/resume.js"></script>
 </body>
-
 
 </html>
