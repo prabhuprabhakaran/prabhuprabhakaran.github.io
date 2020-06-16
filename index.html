@@ -58,6 +58,10 @@
   <!-- End Preloader Area -->
   <!-- Start Header Area -->
   <header id="header">
+    <div class="alert alert-info alert-dismissible alert-fixed" id="adblocker_notice">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>Please turn off adblockers in order to see contact details</strong>
+    </div>
     <div class="container main-menu">
       <div class="row align-items-center d-flex">
         <div id="logo">
@@ -86,6 +90,7 @@
         </nav>
       </div>
     </div>
+
   </header>
   <!-- End Header Area -->
   <!-- start Page Design Area -->
@@ -374,12 +379,26 @@
     //   });
     // });
   </script>
+  <script type="text/javascript">
+    window.addEventListener('load', function () {
+      if (window.ga && ga.create) {
+        $("#adblocker_notice").hide();
+      } else {
+        $("#adblocker_notice").show();
+      }
+      if (window.google_tag_manager) {
+        $("#adblocker_notice").hide();
+      } else {
+        $("#adblocker_notice").show();
+      }
+    }, false);
+  </script>
   <!-- <script type="text/javascript">
-      window.addEventListener('load', function(){
-        
-        helium.init();
-    
-      }, false);
+    window.addEventListener('load', function(){
+
+    helium.init();
+
+    }, false);
     </script> -->
 </body>
 
