@@ -2939,6 +2939,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+@media (max-width: 1480px) {
+  .single-job {
+      padding: 40px 30px;
+  }
+}
+@media (max-width: 991px) {
+  .single-job {
+      padding: 15px 20px;
+  }
+}
+
 @media (max-width: 576px) {
   .single-job .top-sec {
     -webkit-box-direction: normal;
