@@ -6,6 +6,13 @@ positions = '[{\
         "endDate": "Present",\
         "description": "Working as Freelancer Developer"\
     }, {\
+        "company": "Walmart Labs, Chennai, IN",\
+        "image" : "img/walmart.png",\
+        "postion": "Senior System Engineer",\
+        "startDate": "Jul \'20",\
+        "endDate": "Present",\
+        "description": "Working as Devops Engineer"\
+    }, {\
         "company": "TPF Software, Chennai, IN",\
         "image" : "img/tpf.png",\
         "postion": "Technical Lead",\
