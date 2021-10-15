@@ -2024,7 +2024,8 @@ h6 {
   border: 1px solid #f1f1f1;
 }
 .primary-checkbox input:checked + label {
-  background: url(../img/elements/primary-check.png) no-repeat center center/cover;
+  background: url(../img/elements/primary-check.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -2059,7 +2060,8 @@ h6 {
   border: 1px solid #f1f1f1;
 }
 .confirm-checkbox input:checked + label {
-  background: url(../img/elements/success-check.png) no-repeat center center/cover;
+  background: url(../img/elements/success-check.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -2098,7 +2100,8 @@ h6 {
   z-index: 3;
 }
 .disabled-checkbox input:checked + label {
-  background: url(../img/elements/disabled-check.png) no-repeat center center/cover;
+  background: url(../img/elements/disabled-check.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -2133,7 +2136,8 @@ h6 {
   border: 1px solid #f1f1f1;
 }
 .primary-radio input:checked + label {
-  background: url(../img/elements/primary-radio.png) no-repeat center center/cover;
+  background: url(../img/elements/primary-radio.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -2168,7 +2172,8 @@ h6 {
   border: 1px solid #f1f1f1;
 }
 .confirm-radio input:checked + label {
-  background: url(../img/elements/success-radio.png) no-repeat center center/cover;
+  background: url(../img/elements/success-radio.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -2207,7 +2212,8 @@ h6 {
   z-index: 3;
 }
 .disabled-radio input:checked + label {
-  background: url(../img/elements/disabled-radio.png) no-repeat center center/cover;
+  background: url(../img/elements/disabled-radio.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -2843,18 +2849,27 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: relative;
   text-transform: capitalize;
   font-size: 13px;
+  margin-right: 3px;
 }
 .work-area .filters ul li:last-child {
-  padding-right: 0;
+  padding-right: 15px;
 }
 @media (max-width: 991px) {
   .work-area .filters ul li:first-child {
-    padding-left: 0;
+    padding-right: 15px;
   }
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active{
+  color: #fff;
+  background-color: #e45447;
+  border-color: #e44335;
 }
 .work-area .filters ul li.active,
 .work-area .filters ul li:hover {
-  color: #e45447;
+  color: #fff;
+  background-color: #e45447;
+  border-color: #e44335;
 }
 .work-area .filters-content .show {
   opacity: 1;
@@ -2941,12 +2956,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 @media (max-width: 1480px) {
   .single-job {
-      padding: 40px 30px;
+    padding: 40px 30px;
   }
 }
 @media (max-width: 991px) {
   .single-job {
-      padding: 15px 20px;
+    padding: 15px 20px;
   }
 }
 

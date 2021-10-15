@@ -4,7 +4,7 @@ var mySocialLinks = JSON.parse(sociallinks);
 
 var myPositionsHTML = "";
 var skillsAppendHTML = "";
-var filtersAppendHTML = '<ul><li id="allSkillsBtn" class="active" data-filter=".all">All</li>';
+var filtersAppendHTML = '<ul><li id="allSkillsBtn" class="active btn btn-secondary" data-filter=".all">All</li>';
 let positionSlideStart = false;
 let skillsSlideStart = false;
 let position_count = 4;
@@ -117,7 +117,7 @@ function getImageNumber() {
 }
 
 for (let i = 0; i < mySkillset.alltags.length; i++) {
-  filtersAppendHTML += '<li data-filter=".' + mySkillset.alltags[i].name + '">' + mySkillset.alltags[i].description + "</li>";
+  filtersAppendHTML += '<li class="btn btn-secondary" data-filter=".' + mySkillset.alltags[i].name + '">' + mySkillset.alltags[i].description + "</li>";
 }
 filtersAppendHTML += "</ul>";
 //------------------------------------------------------------------------------------//
