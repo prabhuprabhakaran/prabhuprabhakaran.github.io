@@ -422,6 +422,14 @@
       } else {
         $("#adblocker_notice").show();
       }
+      // screen.lockOrientation("portrait");
+      // screen.orientation.lock("portrait"); 
+      window.screen.orientation
+        .lock("portrait")
+        .then(
+          success => console.log(success),
+          failure => console.log(failure)
+        )
     }, false);
   </script>
   <!-- <script type="text/javascript">
