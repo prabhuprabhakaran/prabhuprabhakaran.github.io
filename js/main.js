@@ -11,7 +11,7 @@ $(document).ready(function () {
     $(".fitscreen").css("height", fitscreen);
 
     //------- Wow JS Initialized --------// 
-    new WOW().init();
+    // new WOW().init();
 
     //------- Go to Top --------// 
     $(window).on("scroll", function () {

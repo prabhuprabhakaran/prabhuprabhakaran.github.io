@@ -156,3 +156,18 @@ div::-webkit-scrollbar-thumb {
   /* outline: 1px solid slategrey; */
   border-radius: 15px;
 }
+
+@media (max-width: 1200px) {
+  .about-scroll {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-scroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 65vh;
+  }
+}
