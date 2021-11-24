@@ -17,7 +17,7 @@ if (WURFL.is_mobile === true) {
 for (let i = 0; i < myPositions.length; i++) {
   if (i % position_count == 0) {
     positionSlideStart = true;
-    myPositionsHTML += '<div class="slide"><div class="row">';
+    myPositionsHTML += '<div class="slide"><div class="row" style="padding-right: 25px;">';
   }
   myPositionsHTML +=
     '<div class="col-lg-6">' +
