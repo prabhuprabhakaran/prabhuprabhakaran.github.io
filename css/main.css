@@ -2812,9 +2812,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /*-------- End About Area ------------*/
 /*--------- Start Work Area -------------*/
-.work-area {
-  background: #f9f9ff;
-}
+
 @media (max-width: 1024px) {
   .work-area .row.mb-80 {
     margin-bottom: 30px;
@@ -2859,7 +2857,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
-.btn-secondary:not(:disabled):not(.disabled).active{
+.btn-secondary:not(:disabled):not(.disabled).active {
   color: #fff;
   background-color: #e45447;
   border-color: #e44335;
