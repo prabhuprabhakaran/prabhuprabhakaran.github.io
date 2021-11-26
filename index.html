@@ -105,26 +105,15 @@
   <!-- End Header Area -->
   <!-- start Page Design Area -->
   <div id="fullpage">
+
     <!-- start banner Area -->
     <div class="section active">
       <section class="home-banner-area">
         <div class="container">
           <div class="row fullscreen d-flex align-items-center">
             <div class="banner-content col-xl-6 col-lg-6 col-md-12 justify-content-center ">
-              <!-- <div class="me wow fadeInDown" data-wow-duration="1s" data-wow-delay="1.2s">It's me</div> -->
-              <!-- <h1 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.7s"
-                style="width: inherit;filter: drop-shadow(2px 4px 6px black);">Prabhu Prabhakaran</h1> -->
               <!-- https://chicfetti.com/monogram-maker/ -->
               <img class="" style="width: inherit;filter: drop-shadow(2px 4px 6px black);" src="img/prabhu-2.png" />
-              <!-- <div class="designation mb-50 wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.1s">
-                <span class="designer">Software&nbsp;Engineer</span>,&nbsp;Chennai,&nbsp;<span
-                  class="developer">IN</span>
-                <span class="developer" style="font-size: large;" id="experience"></span>
-              </div> -->
-              <!-- <script type='text/javascript'>
-                var exp = timeSince(new Date("2011-02-01T00:00:00").getTime());
-                document.getElementById("experience").innerHTML = "Experience: " + exp.year + " Years, " + exp.month + " Months";
-              </script> -->
             </div>
             <div class="banner-img col-lg-6 col-md-6" style="margin-top: -40vh;">
               <div style="position: relative; ">
@@ -156,14 +145,12 @@
               <div class="mb-50 about-scroll">
                 <p style="text-align: justify;">
                   Since the time I was a young child, software development has been my passion. I still remember sitting
-                  in front of my HCL Busybee computer, in earlier 1998, making it print my name for the very first time.
-                  As I went through the C tutorial, it was almost magic, being able to get the computer to do whatever
-                  I wanted, just by typing in these funny little symbols, limited only by my own imagination. Throughout
-                  middle and high school, I latched on to any ideas for programs I could get, moving from symbols and
-                  names all the way to a simple logics and calculations. I learned C, then C++, mostly through YPK
-                  books. This enthusiasm carried me through my education at Annamalai University. I studied new
-                  languages, algorithms, compilers, higher mathematics, all with pretty much the same fascination that
-                  drove me as a kid. And it was here that I learned genuinely how much there was at this point to learn.
+                  in front of my HCL Busybee computer, in earlier 1998, making it print my name and funny little
+                  symbols, limited only by my own imagination. Throughout middle and high school, I latched on to any
+                  ideas for programs and all the way. I learned C, then C++, mostly through YPK books. This enthusiasm
+                  carried me through my education at Annamalai University. I studied new languages, algorithms,
+                  compilers, higher mathematics and all pretty much. And it was here that I learned genuinely how much
+                  there was at this point to learn.
                 </p>
                 <p style="text-align: justify;">
                   Over the years, I gained a specific set of skills that allows me to deliver reliable and scalable
@@ -173,7 +160,8 @@
                 </p>
                 <p style="text-align: justify;">
                   Presently I'm in the industry about <strong><span id="experience"></span></strong>. This passion stays
-                  with me. I'm creating softwares and i'm adoring it.
+                  with me. I'm contributing to Opensource and Freelancing. <strong>I'm creating softwares and I'm
+                    adoring it!!!</strong>
                 </p>
               </div>
               <script type='text/javascript'>
@@ -201,7 +189,7 @@
     <!-- End About Area -->
     <!-- Start Work Area Area -->
     <div class="section">
-      <section class="work-area section-gap section-gap-bottom-90" id="work">
+      <section class="work-area section-gap" id="work">
         <!-- <div class="container" style="width: inherit;height: 100%; overflow-y: scroll;"> -->
         <div class="container">
           <div class="row d-flex justify-content-between align-items-end mb-10">
@@ -230,7 +218,7 @@
     </div>
     <!-- Start Job History Area Area -->
     <div class="section">
-      <section class="job-area section-gap-top section-gap-bottom-90 ">
+      <section class="job-area section-gap">
         <div class="container">
           <!-- <div class="container" style="width: inherit;height: 100%; overflow-y: scroll;"> -->
           <div class="row d-flex">
@@ -389,18 +377,88 @@
   <script type='text/javascript' src="js/main.js"></script>
   <script type='text/javascript' src="js/fullpage.min.js"></script>
   <script type="text/javascript">
-    var myFullpage = new fullpage("#fullpage", {
-      continuousVertical: true,
-      // continuousHorizontal: true,
-      slidesNavigation: true,
-      slidesNavPosition: "bottom",
-      controlArrows: false,
-      controlArrowColor: "#e45649",
-      licenseKey: "IIZnkxAP-qX1Gmk3c-XRm38kqG-bsTqP6f3",
+    var myFullpage = new fullpage('#fullpage', {
+      //Navigation
+      menu: '#menu',
+      lockAnchors: false,
       anchors: ["page1", "page2", "page3", "page4", "page5"],
-      menu: "#menu",
-      sectionsColor: ["", "", "", "#e45649", ""]
+      navigation: false,
+      navigationPosition: 'right',
+      navigationTooltips: ['firstSlide', 'secondSlide'],
+      showActiveTooltip: false,
+      slidesNavigation: true,
+      slidesNavPosition: 'bottom',
+
+      //Scrolling
+      css3: true,
+      scrollingSpeed: 700,
+      autoScrolling: true,
+      fitToSection: true,
+      fitToSectionDelay: 1000,
+      scrollBar: false,
+      easing: 'easeInOutCubic',
+      easingcss3: 'ease',
+      loopBottom: false,
+      loopTop: false,
+      loopHorizontal: true,
+      continuousVertical: true,
+      continuousHorizontal: false,
+      scrollHorizontally: true,
+      interlockedSlides: false,
+      dragAndMove: false,
+      offsetSections: false,
+      resetSliders: false,
+      fadingEffect: false,
+      normalScrollElements: '#element1, .element2',
+      scrollOverflow: false,
+      scrollOverflowReset: false,
+      scrollOverflowOptions: null,
+      touchSensitivity: 15,
+      bigSectionsDestination: null,
+
+      //Accessibility
+      keyboardScrolling: true,
+      animateAnchor: true,
+      recordHistory: true,
+
+      //Design
+      controlArrows: false,
+      controlArrowColor: "#fff",
+      verticalCentered: false,
+      sectionsColor: ['#ccc', '#fff'],
+      paddingTop: '0em',
+      paddingBottom: '0px',
+      fixedElements: '#header, .footer',
+      responsiveWidth: 0,
+      responsiveHeight: 0,
+      responsiveSlides: true,
+      parallax: false,
+      parallaxOptions: { type: 'reveal', percentage: 62, property: 'translate' },
+      dropEffect: false,
+      dropEffectOptions: { speed: 2300, color: '#F82F4D', zIndex: 9999 },
+      waterEffect: false,
+      waterEffectOptions: { animateContent: true, animateOnMouseMove: true },
+      cards: false,
+      cardsOptions: { perspective: 100, fadeContent: true, fadeBackground: true },
+
+      //Custom selectors
+      sectionSelector: '.section',
+      slideSelector: '.slide',
+      sectionsColor: ["", "", "", "#e45649", ""],
+
+      lazyLoading: true,
+      licenseKey: "IIZnkxAP-qX1Gmk3c-XRm38kqG-bsTqP6f3",
+      //events
+      onLeave: function (origin, destination, direction) { },
+      afterLoad: function (origin, destination, direction) { },
+      afterRender: function () { },
+      afterResize: function (width, height) { },
+      afterReBuild: function () { },
+      afterResponsive: function (isResponsive) { },
+      afterSlideLoad: function (section, origin, destination, direction) { },
+      onSlideLeave: function (section, origin, destination, direction) { }
     });
+
     // $(window).on("load", function() {
     //   $(".myfilters ul li").on("click", function() {
     //     skill_filter = $(this)

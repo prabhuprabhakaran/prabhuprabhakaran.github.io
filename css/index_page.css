@@ -35,10 +35,10 @@ section {
   color: #fff;
 }
 .job-area .section-title h2:before {
-  background: white;
+  background: #fff;
 }
 .job-area .section-title h2::after {
-  background: white;
+  background: #fff;
 }
 
 .footer-area .footer-logo h4 {
@@ -46,7 +46,7 @@ section {
 }
 
 .footer-area .footer-social a i {
-  color: #ffffff;
+  color: #fff;
 }
 
 .footer-area .footer-social a i:hover {
@@ -169,5 +169,14 @@ div::-webkit-scrollbar-thumb {
     overflow-y: scroll;
     overflow-x: hidden;
     height: 65vh;
+    padding-right: 15px;
   }
+}
+.nav-menu a.active,
+.nav-menu a:hover {
+  color: #e45447 !important;
+  background-color: #fff;
+  border-radius: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
