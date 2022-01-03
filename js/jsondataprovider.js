@@ -2,7 +2,7 @@ var myPositions = JSON.parse(positions);
 var mySkillset = JSON.parse(skillset);
 var mySocialLinks = JSON.parse(sociallinks);
 
-var myPositionsHTML = "";
+var myPositionsHTML = '<div class="row">';
 var skillsAppendHTML = "";
 var filtersAppendHTML = '<ul><li id="allSkillsBtn" class="active btn btn-secondary" data-filter=".all">All</li>';
 let positionSlideStart = false;
@@ -15,10 +15,6 @@ if (WURFL.is_mobile === true) {
   skills_count = 9;
 }
 for (let i = 0; i < myPositions.length; i++) {
-  if (i % position_count == 0) {
-    positionSlideStart = true;
-    myPositionsHTML += '<div class="slide"><div class="row" style="padding-right: 25px;">';
-  }
   myPositionsHTML +=
     '<div class="col-lg-6">' +
     '<div class="single-job">' +
@@ -29,11 +25,11 @@ for (let i = 0; i < myPositions.length; i++) {
     "</h5>" +
     myPositions[i].company +
     "<br/>" +
-    "<b>" +
+    "<strong>" +
     myPositions[i].startDate +
     " to " +
     myPositions[i].endDate +
-    "</b>" +
+    "</strong>" +
     "</div>" +
     '<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">' +
     '<div class="pull-right"><img src="' +
@@ -43,15 +39,8 @@ for (let i = 0; i < myPositions.length; i++) {
     "</div>" +
     "</div>" +
     "</div>";
-  if (positionSlideStart && i % position_count == position_count - 1) {
-    myPositionsHTML += "</div></div>";
-    positionSlideStart = false;
-  }
-  if (positionSlideStart && i == myPositions.length - 1) {
-    myPositionsHTML += "</div></div>";
-  }
 }
-// myPositionsHTML += "";
+myPositionsHTML += "</div>";
 //------------------------------------------------------------------------------------//
 function generateFilteredSkills() {
   let skill_index = 0;

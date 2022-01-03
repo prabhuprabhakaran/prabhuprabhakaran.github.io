@@ -1026,16 +1026,6 @@ th {
   color: #008000;
 }
 
-.alert-fixed {
-  opacity: 0.5;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  z-index: 9999;
-  border-radius: 0px;
-}
-
 .primary-btn {
   color: #fff;
   padding: 0 52px;
@@ -2726,6 +2716,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 @media (max-width: 991px) {
   .banner-img {
+    display: none;
   }
 }
 @media (max-width: 1480px) {
@@ -2812,7 +2803,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /*-------- End About Area ------------*/
 /*--------- Start Work Area -------------*/
-
+.work-area {
+  background: #f9f9ff;
+}
 @media (max-width: 1024px) {
   .work-area .row.mb-80 {
     margin-bottom: 30px;
@@ -2846,27 +2839,18 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: relative;
   text-transform: capitalize;
   font-size: 13px;
-  margin-right: 3px;
 }
 .work-area .filters ul li:last-child {
-  padding-right: 15px;
+  padding-right: 0;
 }
 @media (max-width: 991px) {
   .work-area .filters ul li:first-child {
-    padding-right: 15px;
+    padding-left: 0;
   }
-}
-
-.btn-secondary:not(:disabled):not(.disabled).active {
-  color: #fff;
-  background-color: #e45447;
-  border-color: #e44335;
 }
 .work-area .filters ul li.active,
 .work-area .filters ul li:hover {
-  color: #fff;
-  background-color: #e45447;
-  border-color: #e44335;
+  color: #e45447;
 }
 .work-area .filters-content .show {
   opacity: 1;
@@ -2951,17 +2935,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
-@media (max-width: 1480px) {
-  .single-job {
-    padding: 40px 30px;
-  }
-}
-@media (max-width: 991px) {
-  .single-job {
-    padding: 15px 20px;
-  }
-}
-
 @media (max-width: 576px) {
   .single-job .top-sec {
     -webkit-box-direction: normal;
