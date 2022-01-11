@@ -78,6 +78,10 @@
   color: #fff;
 }
 
+.footer-area .footer-social {
+  margin: 25px 0px 25px;
+}
+
 .footer-area .footer-social a i {
   color: #fff;
 }
@@ -88,4 +92,8 @@
 }
 .footer-area {
   padding: 0px;
+}
+
+.h3 {
+  font-size: 21px;
 }
