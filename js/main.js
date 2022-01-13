@@ -22,6 +22,11 @@ $(document).ready(function () {
             $('#header1').removeClass('header-scrolled1');
             $('#back-top').removeClass('back-top-animation');
         }
+        if ($(this).scrollTop() > 1) {
+          $("#particles-js").height(fitscreen-$(this).scrollTop());
+        } else {
+          $("#particles-js").height(fitscreen-$(this).scrollTop());
+        }
     });
 
     /* ---------------------------------------------
