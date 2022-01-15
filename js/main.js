@@ -23,9 +23,11 @@ $(document).ready(function () {
             $('#back-top').removeClass('back-top-animation');
         }
 
-        if ($(this).scrollTop() > 1 && $(this).scrollTop() < window_height ) {
+        if ($(this).scrollTop() >= 0 && $(this).scrollTop() <= window_height ) {
             $("#particles-js").css({top:-$(this).scrollTop()});
-        } 
+        }else if($(this).scrollTop() > window_height ){
+            $("#particles-js").css({top:-window_height});
+        }
     });
 
     /* ---------------------------------------------
