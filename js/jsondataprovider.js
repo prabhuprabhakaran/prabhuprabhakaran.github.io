@@ -1,5 +1,6 @@
 var myPositions = JSON.parse(positions);
 // var mySkillset = JSON.parse(skillset);
+var mySkillset = { skills: [], alltags: [] };
 var mySocialLinks = JSON.parse(sociallinks);
 
 var myPositionsHTML = '<div class="row">';
@@ -26,7 +27,7 @@ for (let i = 0; i < myPositions.length; i++) {
     myPositions[i].company +
     "</h2>" +
     "<strong>" +
-    myPositions[i].postion+
+    myPositions[i].postion +
     "</strong>" +
     '<a class="close" href="#history">&times;</a>' +
     '<div class="content">' +
