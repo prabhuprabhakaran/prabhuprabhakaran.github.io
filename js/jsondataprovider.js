@@ -1,10 +1,12 @@
 var myPositions = JSON.parse(positions);
-var mySkillset = JSON.parse(skillset);
+// var mySkillset = JSON.parse(skillset);
 var mySocialLinks = JSON.parse(sociallinks);
 
 var myPositionsHTML = '<div class="row">';
+var myPositionsPopupHTML = "";
 var skillsAppendHTML = "";
-var filtersAppendHTML = '<ul><li id="allSkillsBtn" class="active btn btn-secondary" data-filter=".all">All</li>';
+var filtersAppendHTML =
+  '<ul><li id="allSkillsBtn" class="active btn btn-secondary" data-filter=".all">All</li>';
 let positionSlideStart = false;
 let skillsSlideStart = false;
 let position_count = 4;
@@ -15,8 +17,29 @@ if (WURFL.is_mobile === true) {
   skills_count = 9;
 }
 for (let i = 0; i < myPositions.length; i++) {
+  myPositionsPopupHTML +=
+    '<div id="popup_' +
+    myPositions[i].id +
+    '" class="overlay">' +
+    '<div class="popup">' +
+    "<h2>" +
+    myPositions[i].company +
+    "</h2>" +
+    "<strong>" +
+    myPositions[i].postion+
+    "</strong>" +
+    '<a class="close" href="#history">&times;</a>' +
+    '<div class="content">' +
+    myPositions[i].description +
+    "</div>" +
+    "</div>" +
+    "</div>";
+
   myPositionsHTML +=
     '<div class="col-lg-6">' +
+    '<a href="#popup_' +
+    myPositions[i].id +
+    '">' +
     '<div class="single-job">' +
     '<div class="row d-flex justify-content-between">' +
     '<div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">' +
@@ -38,9 +61,10 @@ for (let i = 0; i < myPositions.length; i++) {
     "</div>" +
     "</div>" +
     "</div>" +
+    "</a>" +
     "</div>";
 }
-myPositionsHTML += "</div>";
+myPositionsHTML += myPositionsPopupHTML + "</div>";
 //------------------------------------------------------------------------------------//
 function generateFilteredSkills() {
   let skill_index = 0;
@@ -51,11 +75,21 @@ function generateFilteredSkills() {
           skillsSlideStart = true;
           // skillsAppendHTML += '<div class="slide"> <div class="row grid">';
         }
-        skillsAppendHTML += '<div class="single-work col-6 col-xl-3 col-lg-3 col-md-4 col-sm-6 ';
+        skillsAppendHTML +=
+          '<div class="single-work col-6 col-xl-3 col-lg-3 col-md-4 col-sm-6 ';
         for (let k = 0; k < mySkillset.skills[i].tags.length; k++) {
           skillsAppendHTML += mySkillset.skills[i].tags[k] + " ";
         }
-        skillsAppendHTML += '">' + '<div class="relative">' + '<div class="thumb">' + "<h4>" + mySkillset.skills[i].name[j] + "</h4>" + "</div>" + "</div>" + "</div>";
+        skillsAppendHTML +=
+          '">' +
+          '<div class="relative">' +
+          '<div class="thumb">' +
+          "<h4>" +
+          mySkillset.skills[i].name[j] +
+          "</h4>" +
+          "</div>" +
+          "</div>" +
+          "</div>";
         skill_index++;
         if (skillsSlideStart && skill_index % skills_count == 0) {
           // skillsAppendHTML += "</div> </div>";
@@ -106,7 +140,12 @@ function getImageNumber() {
 }
 
 for (let i = 0; i < mySkillset.alltags.length; i++) {
-  filtersAppendHTML += '<li class="btn btn-secondary" data-filter=".' + mySkillset.alltags[i].name + '">' + mySkillset.alltags[i].description + "</li>";
+  filtersAppendHTML +=
+    '<li class="btn btn-secondary" data-filter=".' +
+    mySkillset.alltags[i].name +
+    '">' +
+    mySkillset.alltags[i].description +
+    "</li>";
 }
 filtersAppendHTML += "</ul>";
 //------------------------------------------------------------------------------------//
@@ -121,10 +160,10 @@ function timeSince(date_future) {
     day: 86400, // feel free to add your own row
     hour: 3600,
     minute: 60,
-    second: 1
+    second: 1,
   };
 
-  Object.keys(s).forEach(function(key) {
+  Object.keys(s).forEach(function (key) {
     r[key] = Math.floor(d / s[key]);
     d -= r[key] * s[key];
   });

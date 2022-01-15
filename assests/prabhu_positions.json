@@ -1,44 +1,50 @@
 positions = '[{\
+        "id": "1",\
         "company": "Freelancer, Chennai, IN",\
         "image" : "img/freelancer.png",\
         "postion": "Freelancer Developer",\
         "startDate": "Apr \'12",\
         "endDate": "Present",\
-        "description": "Working as Freelancer Developer"\
+        "description": "Working as Freelancer Developer. Contributing to opensource and digital transfomation of any business using the cutting edge technologies and digital payment integrations such as whatsapp business, social commerce and others"\
     }, {\
+        "id": "2",\
         "company": "Walmart Labs, Chennai, IN",\
         "image" : "img/walmart.png",\
         "postion": "Senior System Engineer",\
         "startDate": "Jul \'20",\
         "endDate": "Present",\
-        "description": "Working as Devops Engineer"\
+        "description": "<strong>Industry:</strong> <p>Privacy and Data</p> <strong>Major Projects: </strong> Consumer Privacy (Info Sec)"\
     }, {\
+        "id": "3",\
         "company": "TPF Software, Chennai, IN",\
         "image" : "img/tpf.png",\
         "postion": "Technical Lead",\
         "startDate": "May \'15",\
         "endDate": "Jul \'20",\
-        "description": "Worked as Technical Lead for Multiple Java Projects"\
+        "description": "<strong>Industry:</strong> <p>SDLC/MainFrame</p> <strong>Major Projects: </strong> Research Analysis, zTPF Modernization"\
     }, {\
+        "id": "4",\
         "company": "HCL Technologies, Chennai, IN",\
         "image" : "img/hcl.png",\
         "postion": "Software Engineer",\
         "startDate": "Jan \'14",\
         "endDate": "May \'15",\
-        "description": "Worked as Software Engineer"\
+        "description": "<strong>Industry:</strong> <p>Engineering and Research</p> <strong>Major Projects: </strong> KT-GEM/Nexus"\
     }, {\
+        "id": "5",\
         "company": "KGFSL, Coimbatore, IN",\
         "image" : "img/kgfsl.png",\
         "postion": "Software Engineer",\
         "startDate": "Oct \'11",\
         "endDate": "Jan \'14",\
-        "description": "Worked as Software Engineer"\
+        "description": "<strong>Industry:</strong> <p>BFSI Trading (Equity, FO, Options, MCX, Currencies, Derivatives) and Healthcare Insurance Sector</p> <strong>Major Projects: </strong>Dolphin Trading System, Healthfirst Finacial"\
     }, {\
+        "id": "6",\
         "company": "KGISL, Coimbatore, IN",\
         "image" : "img/kgisl.png",\
         "postion": "Software Trainee",\
         "startDate": "Feb \'11",\
         "endDate": "Sep \'11",\
-        "description": "Worked as Software Trainee"\
+        "description": "<p>Strated to learn much about the software industry, development practices and their operations</p>"\
     }\
 ]';
