@@ -25,6 +25,15 @@
   padding-top: 100px;
 }
 
+.section-gap-resume {
+  padding-bottom: 50px;
+}
+@media (min-width: 992px) {
+  .section-gap-resume {
+    padding-bottom: 0px;
+  }
+}
+
 .single-service {
   height: 100%;
 }
