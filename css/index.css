@@ -21,6 +21,10 @@
   }
 }
 
+#nav-menu-container {
+  margin-left: auto;
+}
+
 .section-gap {
   padding-top: 100px;
 }
