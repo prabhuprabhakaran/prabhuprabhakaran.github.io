@@ -57,8 +57,8 @@
   <!-- <script type="text/javascript" src="assests/prabhu_skills.json"></script> -->
   <script type="text/javascript" src="assests/prabhu_links.json"></script>
   <script type="text/javascript" src="js/jsondataprovider.js"></script>
-  <script disable-devtool-auto
-    src='https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'></script>
+  <!-- <script disable-devtool-auto
+    src='https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'></script> -->
   <script async type='text/javascript'
     src='https://platform-api.sharethis.com/js/sharethis.js#property=6156be0846199d0019177890&product=sop'></script>
 </head>
@@ -84,44 +84,33 @@
         </div>
         <nav id="nav-menu-container">
           <ul class="nav-menu">
-            <li>
+            <li class="nav-head">
               <a class="active" href="#home">Prabhu Prabhakaran</a>
             </li>
-            <li>
+            <li class="nav-head">
               <a href="#about">About Myself</a>
             </li>
-            <li class="menu-has-children"><a style="cursor: pointer;">Professional</a>
+            <li class="nav-head">
+              <a href="#history">Job History</a>
+            </li>
+            <li class="nav-head">
+              <a href="#skills">Skills</a>
+            </li>
+            <li class="nav-head menu-has-children"><a style="cursor: pointer;">Resume</a>
               <ul>
                 <li>
-                  <a href="#history">Job History</a>
+                  <a target="_blank" href="./assests/prabhu_resume_sp.pdf">Single Page</a>
                 </li>
                 <li>
-                  <a href="#skills">Skills</a>
-                </li>
-                <li class="menu-has-children"><a style="cursor: pointer;">Resume</a>
-                  <ul class="nav-menu">
-                    <li>
-                      <a target="_blank" href="./assests/prabhu_resume_sp.pdf">Single Page</a>
-                    </li>
-                    <li>
-                      <a target="_blank" href="./assests/prabhu_resume.pdf">Full</a>
-                    </li>
-                  </ul>
+                  <a target="_blank" href="./assests/prabhu_resume.pdf">Full</a>
                 </li>
               </ul>
             </li>
-            <!-- <li class="menu-has-children"><a style="cursor: pointer;">Freelancing</a>
-              <ul>
-                <li>
-                  <a href="#about">OpenSource</a>
-                </li>
-                <li>
-                  <a href="#about">Clients</a>
-                </li>
-              </ul>
-            </li> -->
-            <li>
+            <li class="nav-head">
               <a href="#contact">Contact</a>
+            </li>
+            <li>
+              <img style="cursor: pointer;" class="avatar" src="./img/prabhu.jfif" onclick="toggleNavHead()" />
             </li>
           </ul>
         </nav>
@@ -208,7 +197,7 @@
             <span>f</span>
             <span>o</span>
           </a> -->
-          <a href="./assests/prabhu_resume_sp.pdf" class="primary-btn" data-text="Resume">
+          <a target="_blank" href="./assests/prabhu_resume.pdf" class="primary-btn" data-text="Resume">
             <span>R</span>
             <span>e</span>
             <span>s</span>
@@ -484,6 +473,9 @@
       seturl("social_whatsapp");
       seturl("social_linkedin");
 
+      function toggleNavHead() {
+        $(".nav-head").toggle(500);
+      }
     </script>
   </section>
   <!-- End Contact Area -->
