@@ -2525,7 +2525,7 @@ h6 {
   outline: none;
   cursor: pointer;
 }
-@media (max-width: 800px) {
+@media (max-width: 991px) {
   #mobile-nav-toggle {
     top: 26px;
   }
@@ -2536,7 +2536,7 @@ h6 {
   font-weight: 900;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 991px) {
   #mobile-nav-toggle {
     display: inline;
   }
