@@ -16,11 +16,15 @@ $(document).ready(function () {
     //------- Go to Top --------// 
     $(window).on("scroll", function () {
         if ($(this).scrollTop() > 100) {
-            $('#header1').addClass('header-scrolled1');
             $('#back-top').addClass('back-top-animation');
         } else {
-            $('#header1').removeClass('header-scrolled1');
             $('#back-top').removeClass('back-top-animation');
+        }
+
+        if ($(this).scrollTop() > 0) {
+            $('#header').addClass('header-scrolled');
+        } else {
+            $('#header').removeClass('header-scrolled');
         }
 
         if ($(this).scrollTop() >= 0 && $(this).scrollTop() <= window_height) {
@@ -253,15 +257,6 @@ $(document).ready(function () {
 
 
 
-    //------- Header Scroll Class  js --------//  
-
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('#header').addClass('header-scrolled');
-        } else {
-            $('#header').removeClass('header-scrolled');
-        }
-    });
 
     //------- Owl Carusel  js --------//
     // if ($('.active-brand-carusel').length) {
