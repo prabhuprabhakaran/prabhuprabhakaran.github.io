@@ -127,6 +127,7 @@ h1 {
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
+  z-index: 10;
 }
 .overlay:target {
   visibility: visible;
@@ -156,13 +157,15 @@ h1 {
 }
 .popup .close {
   position: absolute;
-  top: 20px;
-  right: 30px;
+  /* top: 20px;
+  right: 30px; */
   transition: all 200ms;
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
   color: #333;
+  top: -4px;
+  right: 3px;
 }
 .popup .close:hover {
   color: #06d85f;
@@ -190,19 +193,19 @@ h1 {
   border-radius: 50%;
 }
 
-.nav-head {
+/* .nav-head {
   display: none;
-}
+} */
 
 html {
   overflow: scroll;
   overflow-x: hidden;
 }
 ::-webkit-scrollbar {
-  width: 0;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-  background: #FF0000;
+  background: #ff0000;
 }

@@ -35,10 +35,14 @@
   <link rel="stylesheet" href="css/linearicons.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/magnific-popup.css">
-  <link rel="stylesheet" href="css/nice-select.css">
+  <!-- <link rel="stylesheet" href="css/magnific-popup.css"> -->
+  <!-- <link rel="stylesheet" href="css/nice-select.css"> -->
   <link rel="stylesheet" href="css/animate.min.css">
-  <link rel="stylesheet" href="css/owl.carousel.css">
+  <!-- <link rel="stylesheet" href="css/owl.carousel.css"> -->
+  <!-- <link rel="stylesheet" href="css/superfish.min.css">
+  <link rel="stylesheet" href="css/superfish-navbar.min.css">
+  <link rel="stylesheet" href="css/superfish-vertical.min.css">
+  <link rel="stylesheet" href="css/megafish.min.css"> -->
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/index.css">
 
@@ -77,10 +81,11 @@
     <div class="container main-menu">
       <div class="row align-items-center d-flex">
         <div id="logo">
-          <a href="index.html">
+          <!-- <a href="index.html">
             <img class="img-fluid" style="position: fixed;" src="img/logo.png" alt="logo-1" />
             <img class="img-fluid animtop" src="img/logo_i.png" alt="logo-2" />
-          </a>
+          </a> -->
+          <img style="cursor: pointer;" class="avatar" src="./img/prabhu.jfif" onclick="headerIconClick()" />
         </div>
         <nav id="nav-menu-container">
           <ul class="nav-menu">
@@ -99,27 +104,25 @@
             <li class="nav-head menu-has-children"><a style="cursor: pointer;">Resume</a>
               <ul>
                 <li>
-                  <a target="_blank" href="./assests/prabhu_resume_sp.pdf">Single Page</a>
+                  <a target="_blank" href="./assests/prabhu_resume_sp.pdf">Single Page Resume</a>
                 </li>
                 <li>
-                  <a target="_blank" href="./assests/prabhu_resume.pdf">Full</a>
+                  <a target="_blank" href="./assests/prabhu_resume.pdf">Detail Resume</a>
                 </li>
               </ul>
             </li>
             <li class="nav-head">
               <a href="#contact">Contact</a>
             </li>
-            <li>
-              <img style="cursor: pointer;" class="avatar" src="./img/prabhu.jfif" onclick="toggleNavHead()" />
-            </li>
           </ul>
         </nav>
       </div>
     </div>
   </header>
+
   <!-- End Header Area -->
   <script src="js/particles.min.js"></script>
-  <script src="js/stats.min.js"></script>
+  <!-- <script src="js/stats.min.js"></script> -->
   <script>
     particlesJS.load("particles-js", "assests/particlesjs-config.json", null);
   </script>
@@ -147,7 +150,6 @@
   </section>
   <!-- End banner Area -->
 
-
   <!-- Start About Area -->
   <section class="about-area section-gap section-gap-resume" id="about">
     <div class="container">
@@ -161,25 +163,20 @@
           </div>
           <div class="wow fadeIn" data-wow-duration="2s">
             <p style="text-align: justify;">
-              Since the time I was a young child, software development has been my passion. I still remember sitting
-              in front of my HCL Busybee computer, in earlier 1998, making it print my name and funny little
-              symbols, limited only by my own imagination. Throughout middle and high school, I latched on to any
-              ideas for programs and all the way. I learned C, then C++, mostly through YPK books. This enthusiasm
-              carried me through my education at Annamalai University. I studied new languages, algorithms and all
-              pretty much. And it was here that I learned genuinely how much there was at this point to learn.
-            </p>
-            <p style="text-align: justify;">
               Over the years, I worked on multiple companies like KGfSL (now KGiSL-GSS), HCL Technologies, TPF
-              Software India (now TSI) and currently with <strong>Walmart GTS</strong>. I gained a specific set of
+              Software India (now TSI) and currently with <strong>Walmart GTS</strong>. </p>
+            <p style="text-align: justify;">I gained a specific set of
               skills that allows me to deliver reliable and scalable softwares. I'm passionate about the work I do
               however considerably more so dedicated to developing a positive and efficient team environment.
               Regardless of whether in the workplace or working remotely, my door is always open to all, whether on
               my team or not.
             </p>
+            <p style="text-align: justify;">
+              you can reach out to me for a causal discussion, tech discussion, freelancing or just coffee.
+            </p>
             <blockquote class="generic-blockquote" style="text-align: justify;">
               Presently I'm in the industry about <strong><span id="experience"></span></strong>. This
-              passion stays with me. I'm contributing to Opensource and Freelancing. <strong>I'm creating softwares
-                and I'm adoring it!!!</strong>
+              passion stays with me. I'm contributing to Opensource and Freelancing.
             </blockquote>
           </div>
           <script type='text/javascript'>
@@ -211,6 +208,19 @@
   </section>
   <!-- End About Area -->
 
+  <!-- <div id="popup_resume" class="overlay">
+    <div class="popup">
+      <a class="close" href="#">&times;</a>
+      <object data="./assests/prabhu_resume_sp.pdf" style="width:100%;height: 80vh;"></object>
+    </div>
+  </div>
+
+  <div id="popup_resume_full" class="overlay">
+    <div class="popup">
+      <a class="close" href="#">&times;</a>
+      <object data="./assests/prabhu_resume.pdf" style="width:100%;height: 80vh;"></object>
+    </div>
+  </div> -->
 
   <!-- Start Job History Area Area -->
   <section class="job-area section-gap" id="history">
@@ -223,7 +233,6 @@
           </div>
         </div>
       </div>
-
       <div class="wow fadeIn" data-wow-duration="3s" id="positions"></div>
       <script type='text/javascript'>
         document.getElementById("positions").innerHTML = myPositionsHTML;
@@ -278,7 +287,7 @@
             <h4>
               <span>Frontend</span>
             </h4>
-            <p>HTML, CSS, JS, JQuery, Angular, Thick Client RCP</p>
+            <p>HTML, CSS, JS, JQuery, Angular, React JS, Thick Client RCP</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6" style="padding-top: 20px;">
@@ -473,8 +482,11 @@
       seturl("social_whatsapp");
       seturl("social_linkedin");
 
-      function toggleNavHead() {
-        $(".nav-head").toggle(500);
+
+      function headerIconClick() {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 1000);
       }
     </script>
   </section>
@@ -513,16 +525,16 @@
   <!-- <script type="text/javascript"
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script> -->
   <script src="js/easing.min.js"></script>
-  <script src="js/hoverIntent.js"></script>
+  <!-- <script src="js/hoverIntent.js"></script> -->
   <script src="js/superfish.min.js"></script>
-  <script src="js/mn-accordion.js"></script>
-  <script src="js/jquery.ajaxchimp.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.nice-select.min.js"></script>
-  <script src="js/isotope.pkgd.min.js"></script>
-  <script src="js/jquery.circlechart.js"></script>
-  <script src="js/mail-script.js"></script>
+  <!-- <script src="js/mn-accordion.js"></script> -->
+  <!-- <script src="js/jquery.ajaxchimp.min.js"></script> -->
+  <!-- <script src="js/jquery.magnific-popup.min.js"></script> -->
+  <!-- <script src="js/owl.carousel.min.js"></script> -->
+  <!-- <script src="js/jquery.nice-select.min.js"></script> -->
+  <!-- <script src="js/isotope.pkgd.min.js"></script> -->
+  <!-- <script src="js/jquery.circlechart.js"></script> -->
+  <!-- <script src="js/mail-script.js"></script> -->
   <script src="js/wow.min.js"></script>
   <script src="js/main.js"></script>
 </body>
