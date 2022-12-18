@@ -10,7 +10,7 @@ positions = '[{\
         "id": "2",\
         "company": "Walmart Labs, Chennai, IN",\
         "image" : "img/walmart.png",\
-        "postion": "Senior System Engineer",\
+        "postion": "Staff Software Engineer",\
         "startDate": "Jul \'20",\
         "endDate": "Present",\
         "description": "<strong>Industry:</strong> <p>Privacy and Data</p> <strong>Major Projects: </strong> Consumer Privacy (Info Sec)"\
