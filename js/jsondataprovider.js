@@ -1,7 +1,7 @@
-var myPositions = JSON.parse(positions);
+// var myPositions = JSON.parse(positions);
 // var mySkillset = JSON.parse(skillset);
 var mySkillset = { skills: [], alltags: [] };
-var mySocialLinks = JSON.parse(sociallinks);
+var mySocialLinks;
 
 var myPositionsHTML = '<div class="row">';
 var myPositionsPopupHTML = "";
@@ -13,61 +13,92 @@ let skillsSlideStart = false;
 let position_count = 4;
 let skills_count = 24;
 let skill_filter = "all";
+
 if (WURFL.is_mobile === true) {
   position_count = 3;
   skills_count = 9;
 }
-for (let i = 0; i < myPositions.length; i++) {
-  myPositionsPopupHTML +=
-    '<div id="popup_' +
-    myPositions[i].id +
-    '" class="overlay">' +
-    '<div class="popup">' +
-    "<h2>" +
-    myPositions[i].company +
-    "</h2>" +
-    "<strong>" +
-    myPositions[i].postion +
-    "</strong>" +
-    '<a class="close" href="#history">&times;</a>' +
-    '<div class="content">' +
-    myPositions[i].description +
-    "</div>" +
-    "</div>" +
-    "</div>";
 
-  myPositionsHTML +=
-    '<div class="col-lg-6">' +
-    '<a href="#popup_' +
-    myPositions[i].id +
-    '">' +
-    '<div class="single-job">' +
-    '<div class="row d-flex justify-content-between">' +
-    '<div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">' +
-    "<h5>" +
-    myPositions[i].postion +
-    "</h5>" +
-    myPositions[i].company +
-    "<br/>" +
-    "<strong>" +
-    myPositions[i].startDate +
-    " to " +
-    myPositions[i].endDate +
-    "</strong>" +
-    "</div>" +
-    '<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">' +
-    '<div class="pull-right"><img src="' +
-    myPositions[i].image +
-    '" width=100/></div>' +
-    "</div>" +
-    "</div>" +
-    "</div>" +
-    "</a>" +
-    "</div>";
-}
-myPositionsHTML += myPositionsPopupHTML + "</div>";
 //------------------------------------------------------------------------------------//
-function generateFilteredSkills() {
+function loadJobHistory() {
+  //<strong>Industry: </strong>---<br/><strong>Major Projects: </strong>---<br/><br/> <p><b>1. ---</b></p> <p>---</p>
+  fetch("./assets/prabhu_positions.json").then(response => {
+    if (response.ok) {
+      return response.json();
+    }
+  })
+    .then(myPositions => {
+      for (let i = 0; i < myPositions.length; i++) {
+        myPositionsPopupHTML +=
+          '<div id="popup_' +
+          myPositions[i].id +
+          '" class="overlay">' +
+          '<div class="popup">' +
+          "<h2>" +
+          myPositions[i].company +
+          "</h2>" +
+          "<strong>" +
+          myPositions[i].postion +
+          "</strong>" +
+          '<a class="close" href="#history">&times;</a>' +
+          '<div class="content">' +
+          myPositions[i].description +
+          "</div>" +
+          "</div>" +
+          "</div>";
+
+        myPositionsHTML +=
+          '<div class="col-lg-6">' +
+          '<a href="#popup_' +
+          myPositions[i].id +
+          '">' +
+          '<div class="single-job">' +
+          '<div class="row d-flex justify-content-between">' +
+          '<div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">' +
+          "<h5>" +
+          myPositions[i].postion +
+          "</h5>" +
+          myPositions[i].company +
+          "<br/>" +
+          "<strong>" +
+          myPositions[i].startDate +
+          " to " +
+          myPositions[i].endDate +
+          "</strong>" +
+          "</div>" +
+          '<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">' +
+          '<div class="pull-right"><img src="' +
+          myPositions[i].image +
+          '" width=100/></div>' +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</a>" +
+          "</div>";
+      }
+      myPositionsHTML += myPositionsPopupHTML + "</div>";
+      document.getElementById("positions").innerHTML = myPositionsHTML;
+    })
+    .catch((e) => {
+      (console.error || console.log).call(console, e.stack || e);
+    });
+
+}
+
+function loadSkillsFilter() {
+  for (let i = 0; i < mySkillset.alltags.length; i++) {
+    filtersAppendHTML +=
+      '<li class="btn btn-secondary" data-filter=".' +
+      mySkillset.alltags[i].name +
+      '">' +
+      mySkillset.alltags[i].description +
+      "</li>";
+  }
+  filtersAppendHTML += "</ul>";
+  loadSkills();
+}
+
+function loadSkills() {
   let skill_index = 0;
   for (let i = 0; i < mySkillset.skills.length; i++) {
     if (mySkillset.skills[i].tags.includes(skill_filter)) {
@@ -103,7 +134,6 @@ function generateFilteredSkills() {
     }
   }
 }
-generateFilteredSkills();
 
 function setCookie(cname, cvalue, exdays) {
   var d = new Date();
@@ -140,15 +170,6 @@ function getImageNumber() {
   return image_number % 3;
 }
 
-for (let i = 0; i < mySkillset.alltags.length; i++) {
-  filtersAppendHTML +=
-    '<li class="btn btn-secondary" data-filter=".' +
-    mySkillset.alltags[i].name +
-    '">' +
-    mySkillset.alltags[i].description +
-    "</li>";
-}
-filtersAppendHTML += "</ul>";
 //------------------------------------------------------------------------------------//
 function timeSince(date_future) {
   var d = Math.abs(date_future - new Date()) / 1000; // delta
@@ -170,4 +191,38 @@ function timeSince(date_future) {
   });
 
   return r;
+}
+
+function headerIconClick() {
+  $('body,html').animate({
+    scrollTop: 0
+  }, 1000);
+}
+
+function seturl(id) {
+  if (mySocialLinks) {
+    if (WURFL.is_mobile === true) {
+      document.getElementById(id).setAttribute("href", mySocialLinks.mobile[id]);
+    } else {
+      document.getElementById(id).setAttribute("href", mySocialLinks.desktop[id]);
+    }
+  } else {
+    fetch("./assets/prabhu_links.json").then(response => {
+      if (response.ok) {
+        return response.json();
+      }
+    })
+      .then(mySocialLinks1 => {
+        mySocialLinks = mySocialLinks1;
+        if (WURFL.is_mobile === true) {
+          document.getElementById(id).setAttribute("href", mySocialLinks.mobile[id]);
+        } else {
+          document.getElementById(id).setAttribute("href", mySocialLinks.desktop[id]);
+        }
+      })
+      .catch((e) => {
+        (console.error || console.log).call(console, e.stack || e);
+      });
+  }
+
 }
