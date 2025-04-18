@@ -1,56 +1,56 @@
 [
-    {
-        "id": "1",
-        "company": "Freelancer, Chennai, IN",
-        "image": "img/freelancer.png",
-        "postion": "Freelancer Developer",
-        "startDate": "Apr '12",
-        "endDate": "Present",
-        "description": "Working as Freelancer Developer. Contributing to opensource and digital transfomation of any business using the cutting edge technologies and digital payment integrations such as whatsapp business, social commerce and others"
-    },
-    {
-        "id": "2",
-        "company": "Walmart, Chennai, IN",
-        "image": "img/walmart.png",
-        "postion": "Staff Software Engineer",
-        "startDate": "Jul '20",
-        "endDate": "Present",
-        "description": "<strong>Industry: </strong>EComm, Privacy and Data Engineering <br/><strong>Major Projects: </strong>Digital Citizenship<br/><br/> <p><b>1. Digital Citizenship</b></p> <p>I spearheaded the development of a robust privacy platform at Walmart, dedicated to enhancing digital citizenship by granting consumers greater control over their personal data. This transformative project aligned with the ever-evolving landscape of data privacy regulations, encompassing state and international mandates such as the right to know, delete, and opt-out.</p> <p><strong>Strategic Leadership:</strong> As a Staff Software Engineer, I took charge of a proficient team and oversaw the complete software life cycle. My role extended to coding, implementation, and mentoring team members. </p><strong>Architectural Excellence:</strong> I led the design of a sophisticated architecture, meticulously crafting RESTful services using powerful technologies like Spring, Spring Boot, and Spring Cloud. This architectural foundation ensured scalability and reliability.</p>"
-    },
-    {
-        "id": "3",
-        "company": "TPF Software, Chennai, IN",
-        "image": "img/tpf.png",
-        "postion": "Technical Lead",
-        "startDate": "May '15",
-        "endDate": "Jul '20",
-        "description": "<strong>Industry: </strong>SDLC, Mainframe, DevOps<br/><strong>Major Projects: </strong>Research Analysis, zTPF Modernization<br/><br/> <p><b>1.Research Analysis</b></p> <p>I lead the transformative Research Analysis project. I orchestrated RESTful service development, code quality assurance. This transformation enabled efficient analysis of z/TPF code changes through graphical visualization, enhancing impact assessment and accelerating decision-making.</p><p><b>2.zTPF Modernization</b></p> <p>I played a critical role in the modernization journey of zTPF (Transaction Processing Facility) systems. Through the strategic implementation of DevOps practices, I lead the transformation of these mission-critical systems, ushering in enhanced agility, efficiency, and scalability.</p>"
-    },
-    {
-        "id": "4",
-        "company": "HCL Technologies, Chennai, IN",
-        "image": "img/hcl.png",
-        "postion": "Software Engineer",
-        "startDate": "Jan '14",
-        "endDate": "May '15",
-        "description": "<strong>Industry: </strong>Engineering and Research<br/><strong>Major Projects: </strong>KT-GEM/Nexus<br/><br/> <p><b>1.KT-GEM/Nexus</b></p> <p>I developed a communication interface with SECS/GEM Standard. In an automated FAB, this interface can start and stop equipment processing, collect measurement data, change variables and select recipes for products.</p>"
-    },
-    {
-        "id": "5",
-        "company": "KGFSL, Coimbatore, IN",
-        "image": "img/kgfsl.png",
-        "postion": "Software Engineer",
-        "startDate": "Oct '11",
-        "endDate": "Jan '14",
-        "description": "<strong>Industry: </strong>BFSI Trading (Equity, FO, Options, MCX, Currencies, Derivatives), Healthcare and Insurance<br/><strong>Major Projects: </strong>Dolphin Trading System, Healthfirst Finacial<br/><br/> <p><b>1. Dolphin Trading System</b></p> <p>---</p> <p><b>2. Healthfirst Finacial</b></p> <p>---</p>"
-    },
-    {
-        "id": "6",
-        "company": "KGISL, Coimbatore, IN",
-        "image": "img/kgisl.png",
-        "postion": "Software Trainee",
-        "startDate": "Feb '11",
-        "endDate": "Sep '11",
-        "description": "<p>Strated to learn much about the software industry, development practices and their operations</p>"
-    }
+  {
+    "id": "1",
+    "company": "Freelancer, Chennai, IN",
+    "image": "img/freelancer.png",
+    "postion": "Freelancer Developer",
+    "startDate": "Apr '12",
+    "endDate": "Present",
+    "description": "Operating as a Freelance Developer, I specialize in delivering end-to-end digital transformation solutions for businesses by leveraging cutting-edge technologies. My expertise spans open-source contributions, social commerce integrations, and advanced digital payment solutions, including WhatsApp Business API and other modern platforms. I focus on creating scalable, secure, and efficient systems that empower businesses to thrive in the digital economy."
+  },
+  {
+    "id": "2",
+    "company": "Walmart, Chennai, IN",
+    "image": "img/walmart.png",
+    "postion": "Staff Software Engineer",
+    "startDate": "Jul '20",
+    "endDate": "Present",
+    "description": "<strong>Industry: </strong>E-Commerce, Privacy Engineering, and Data Governance<br/><strong>Major Projects: </strong>Digital Citizenship<br/><br/> <p><b>1. Digital Citizenship</b></p> <p>I led the development of an advanced privacy and data governance platform at Walmart, empowering consumers with granular control over their personal data. This initiative was designed to comply with dynamic global data privacy regulations, including GDPR, CCPA, and other emerging frameworks, addressing rights such as data access, deletion, and opt-out preferences.</p> <p><strong>Technical Leadership:</strong> As a Staff Software Engineer, I directed a high-performing team, driving the end-to-end software development lifecycle (SDLC). My responsibilities included hands-on coding, CI/CD pipeline optimization, and mentoring engineers to adopt best practices in microservices and cloud-native development.</p> <p><strong>Architectural Innovation:</strong> I architected a scalable, distributed system leveraging cutting-edge technologies such as Spring Boot, Spring Cloud, Kubernetes, and Docker. The platform utilized event-driven architecture with Apache Kafka for real-time data processing and ensured high availability through multi-region deployments on Azure.</p> <p><strong>Modern Engineering Practices:</strong> I championed the adoption of DevSecOps principles, integrating automated security testing and monitoring into the CI/CD pipelines. Additionally, I implemented observability tools like Prometheus and Grafana to ensure system reliability and performance at scale.</p>"
+  },
+  {
+    "id": "3",
+    "company": "TPF Software, Chennai, IN",
+    "image": "img/tpf.png",
+    "postion": "Technical Lead",
+    "startDate": "May '15",
+    "endDate": "Jul '20",
+    "description": "<strong>Industry: </strong>SDLC, Mainframe Modernization, DevOps, and Cloud-Native Transformation<br/><strong>Major Projects: </strong>Research Analysis, zTPF Modernization<br/><br/> <p><b>1. Research Analysis</b></p> <p>I spearheaded the transformative Research Analysis initiative, driving the development of RESTful APIs and ensuring adherence to advanced code quality standards through automated testing frameworks. This project leveraged data visualization tools to graphically represent z/TPF code changes, enabling precise impact analysis and accelerating decision-making processes. The integration of CI/CD pipelines further streamlined the deployment lifecycle, ensuring rapid and reliable delivery.</p><p><b>2. zTPF Modernization</b></p> <p>I played a pivotal role in the modernization of zTPF (Transaction Processing Facility) systems, adopting cutting-edge DevOps methodologies and containerization technologies like Docker to enhance agility and scalability. By implementing Infrastructure as Code (IaC) using tools such as Terraform and Ansible, I facilitated seamless cloud-native transformations. This initiative significantly improved system performance, operational efficiency, and adaptability to evolving business needs.</p>"
+  },
+  {
+    "id": "4",
+    "company": "HCL Technologies, Chennai, IN",
+    "image": "img/hcl.png",
+    "postion": "Software Engineer",
+    "startDate": "Jan '14",
+    "endDate": "May '15",
+    "description": "<strong>Industry: </strong>Engineering and Research<br/><strong>Major Projects: </strong>KT-GEM/Nexus<br/><br/> <p><b>1. KT-GEM/Nexus</b></p> <p>I engineered a robust communication interface adhering to the SECS/GEM standards, enabling seamless integration within automated FAB environments. This interface facilitated advanced equipment orchestration, including initiating and halting processing, real-time data acquisition, dynamic variable adjustments, and intelligent recipe selection for product customization. Leveraging modern software engineering practices, I implemented scalable microservices architecture and ensured high availability through containerization with Docker and orchestration using Kubernetes. Additionally, I integrated observability tools for proactive monitoring and optimized performance using event-driven design patterns.</p>"
+  },
+  {
+    "id": "5",
+    "company": "KGFSL, Coimbatore, IN",
+    "image": "img/kgfsl.png",
+    "postion": "Software Engineer",
+    "startDate": "Oct '11",
+    "endDate": "Jan '14",
+    "description": "<strong>Industry: </strong>BFSI Trading (Equity, FO, Options, MCX, Currencies, Derivatives), Healthcare, and Insurance<br/><strong>Major Projects: </strong>Dolphin Trading System, Healthfirst Financial<br/><br/> <p><b>1. Dolphin Trading System</b></p> <p>I contributed to the development of the Dolphin Trading System, a high-performance trading platform designed for real-time processing of equity, FO, options, MCX, and currency transactions. Leveraging advanced algorithms and low-latency architectures, the system ensured seamless trade execution and compliance with regulatory standards. I implemented microservices-based architecture, enabling modularity and scalability, and integrated real-time data analytics for actionable insights. Additionally, I utilized containerization technologies like Docker and orchestration tools such as Kubernetes to enhance system reliability and scalability.</p> <p><b>2. Healthfirst Financial</b></p> <p>I played a key role in the Healthfirst Financial project, focusing on the development of a secure and scalable financial management platform for healthcare and insurance sectors. The platform incorporated advanced encryption techniques and adhered to HIPAA compliance standards to ensure data security and privacy. Furthermore, I integrated analytics to provide insights and improve decision-making processes for stakeholders.</p>"
+  },
+  {
+    "id": "6",
+    "company": "KGISL, Coimbatore, IN",
+    "image": "img/kgisl.png",
+    "postion": "Software Trainee",
+    "startDate": "Feb '11",
+    "endDate": "Sep '11",
+    "description": "<p>Embarked on a journey to gain foundational knowledge in the software industry, focusing on modern development practices, agile methodologies, and operational workflows. Acquired hands-on experience in software development lifecycle (SDLC), version control systems like Git, and collaborative tools. Explored emerging trends such as cloud computing, containerization, and microservices architecture, laying the groundwork for a career in cutting-edge software engineering.</p>"
+  }
 ]
