@@ -127,3 +127,13 @@ body.theme-dark {
 .theme-toggle-btn:focus {
   outline: 2px solid var(--white);
 }
+
+.theme-light .footer-area {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+.theme-dark .footer-area {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}

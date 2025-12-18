@@ -29,22 +29,14 @@
   background: var(--primary);
 }
 
-.footer-area .footer-bottom a {
-  color: var(--white);
-}
-
 .footer-area .footer-social {
   margin: 25px 0px 25px;
 }
 
-.footer-area .footer-social a i {
-  color: var(--white);
-}
-
 .footer-area .footer-social a i:hover {
   transform: scale(2);
-  color: var(--white);
 }
+
 .footer-area {
   padding: 0px;
 }
