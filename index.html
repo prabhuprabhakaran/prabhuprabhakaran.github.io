@@ -5,7 +5,7 @@
   <!-- Meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="author" content="Prabhu Prabhakaran" />
-  <meta name="theme-color" content="#e45649" />
+  <meta name="theme-color" content="#007bff" />
   <meta name="description" content="Software Engineer with an expertise in Java, Devops and Other Open Source, 
       with over 10 years of experience. Had significant contributions to various clients." />
   <meta name="keywords" content="Prabhu, Prabhakaran, Prabhu Prabhakaran, p.r.c.prabhu, p.r.c.prabhu@gmail.com,
@@ -38,6 +38,8 @@
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/theme/theme-toggle.css">
+  <link rel="stylesheet" href="css/theme/theme-contrast-fix.css">
 
   <!-- SCRIPT -->
   <script async type='text/javascript' src="https://www.googletagmanager.com/gtag/js?id=UA-158737439-1"></script>
@@ -51,13 +53,16 @@
   </script>
   <script type="text/javascript" src="//wurfl.io/wurfl.js"></script>
   <script type="text/javascript" src="js/jsondataprovider.js"></script>
-  <script disable-devtool-auto
+  <script disable-devtool-auto-1
     src='https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'></script>
   <script async type='text/javascript'
     src='https://platform-api.sharethis.com/js/sharethis.js#property=6156be0846199d0019177890&product=sop'></script>
 </head>
 
-<body>
+  <body class="theme-light">
+    <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle dark/light mode">
+      <span id="themeToggleIcon" class="fa fa-moon-o"></span>
+    </button>
   <!-- Start Preloader Area -->
   <div class="preloader-area">
     <div class="loader-box">
@@ -75,7 +80,7 @@
             <img class="img-fluid" style="position: fixed;" src="img/logo.png" alt="logo-1" />
             <img class="img-fluid animtop" src="img/logo_i.png" alt="logo-2" />
           </a> -->
-          <img style="cursor: pointer;" class="avatar" src="./img/prabhu.jfif" onclick="headerIconClick()" />
+          <img style="cursor: pointer;" class="avatar" src="./img/prabhu_icon.png" onclick="headerIconClick()" />
         </div>
         <nav id="nav-menu-container">
           <ul class="nav-menu">
@@ -91,15 +96,7 @@
             <li class="nav-head">
               <a href="#skills">Skills</a>
             </li>
-            <li class="nav-head menu-has-children"><a style="cursor: pointer;">Resume</a>
-              <ul>
-                <li>
-                  <a target="_blank" href="./assets/prabhu_resume_sp.pdf">Single Page Resume</a>
-                </li>
-                <li>
-                  <a target="_blank" href="./assets/prabhu_resume.pdf">Detail Resume</a>
-                </li>
-              </ul>
+            <li class="nav-head menu-has-children"><a target="_blank" href="./assets/prabhu_resume.pdf" style="cursor: pointer;">Resume</a>
             </li>
             <li class="nav-head">
               <a href="#contact">Contact</a>
@@ -121,20 +118,18 @@
   <section class="home-banner-area" id="home">
     <div class="container">
       <div class="row fullscreen d-flex align-items-center">
-        <div class="banner-content col-xl-6 col-lg-6 col-md-12 justify-content-center ">
-          <!-- https://chicfetti.com/monogram-maker/ -->
-          <img class="" style="width: inherit;filter: drop-shadow(0px 8px 13px gray);" src="img/prabhu.png"
-            alt="Prabhu Prabhakaran" />
-          <h1 style="display: none;">Prabhu Prabhakaran</h1>
-        </div>
-        <div class="banner-img col-lg-6 col-md-6" style="margin-top: -40vh;">
-          <div style="position: relative; ">
-            <img class="img-fluid" style="position: absolute;left: 10%;" src="img/banner-img-0.png"
-              alt="reading_image-1" />
-            <img class="img-fluid animtop" style="position: absolute;left: 10%;" src="img/banner-img-2.png"
-              alt="reading_image-2" />
+        <div class="about-summary-card shadow-lg p-4 mb-4 bg-white rounded text-center">
+            <img class="img-fluid rounded-circle mb-3" src="img/prabhu_icon.png" alt="Prabhu Prabhakaran" style="width: 160px; height: 160px; object-fit: cover; border: 4px solid var(--primary);">
+            <h2 class="mb-1">Prabhu Prabhakaran</h2>
+            <h5 class="text-muted mb-2">Staff Software Engineer</h5>
+            <div class="mb-2"><span id="experience"></span> Experience</div>
+            <div class="d-flex justify-content-center gap-2">
+              <a href="mailto:p.r.c.prabhu@gmail.com" class="fa fa-envelope card-link mx-2"></a>
+              <a href="tel:+919677625269" class="fa fa-phone card-link mx-2"></a>
+              <a href="https://www.linkedin.com/in/prabhuprabhakaran/" class="fa fa-linkedin card-link mx-2"></a>
+              <a href="https://github.com/prabhuprabhakaran" class="fa fa-github card-link mx-2"></a>
+            </div>
           </div>
-        </div>
       </div>
     </div>
   </section>
@@ -143,87 +138,91 @@
   <!-- Start About Area -->
   <section class="about-area section-gap section-gap-resume" id="about">
     <div class="container">
-      <div class="row align-items-end justify-content-between">
-        <div class="col-lg-5 about-left">
-          <img class="img-fluid" src="img/about-img.png" alt="">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-lg-5 about-left d-flex flex-column align-items-center">
+          
         </div>
         <div class="col-lg-7 col-md-12 about-right">
           <div class="section-title">
-            <h2>about myself</h2>
+            <h2>About Me</h2>
           </div>
           <div class="wow fadeIn" data-wow-duration="2s" style="text-align: justify;">
             <p>
-              Hello there! I'm <b>Prabhu Prabhakaran</b>, and I'm thrilled to welcome you to my corner of the digital world.
-              With over <span id="experience"></span> of comprehensive experience in the IT industry, I've the
-              privilege of diving into
-              various niches within the technology landscape, from Java programming to Full Stack development and DevOps
-              methodologies. My curiosity knows no bounds, and I'm particularly intrigued by the realms of Machine
-              Learning and Blockchain.
-            </p>
-            <b>A Creative Problem Solver</b>
-            <p>
-              With an eye for detail and a penchant for innovation, I've woven my skills into the fabric of software
-              development life cycles. From requirement analysis to design, development, testing, and performance
-              tuning, I'm committed to delivering reliable, efficient, and high-quality solutions. I thrive in Agile
-              environments and relish the opportunity to bring fresh perspectives to complex challenges.
-            </p>
-            <b>A Journey Through Technology</b>
-            <p>
-              My journey in the tech world has been a dynamic one, marked by hands-on experience and a deep dive into
-              multiple domains, including BFSI, ERS, Healthcare, SDLC, DevOps, E-Commerce, and Privacy.
-              With a strong foundation in Java technologies, I've amassed proficiency in areas such as Core Java,
-              Multi-Threading, JMS, JDBC, TCP, UDP, SOAP, REST and Swing. My journey includes diving into rich client
-              application frameworks
-              like Netbeans and Eclipse SWT, working with data formats like XML, YML, and JSON, and mastering Java-based
-              web technologies including Struts, Spring Boot, Spring Batch, Spring Security, Spring Cloud, and
-              Hibernate. I've worked with HTML, JavaScript, CSS, and explored frameworks like AngularJS, Angular 6-8,
-              and ReactJS.
+              I am a passionate and results-driven software engineer with over <span id="experience"></span> of experience architecting, developing, and leading high-impact technology solutions. My expertise spans Java, DevOps, cloud-native systems, and open-source technologies, with a proven track record of delivering scalable, secure, and innovative products for global clients.
             </p>
             <p>
-              I'm well-versed in various tools and technologies, having delved into the worlds of DevOps with tools like
-              JIRA, GIT, Ansible, Docker, Kubernetes, Vault, Consul, Teraform and Jenkins. My experience extends to
-              cloud environments, having worked with
-              both AWS and Azure, and I have a sound understanding of Micro-Services, Event-Driven, Monolith, and API
-              Architectures.
+              <b>Professional Highlights:</b>
+              <ul>
+                <li>Technical leadership in privacy engineering, cloud transformation, and distributed systems.</li>
+                <li>Hands-on experience with microservices, event-driven architectures, and CI/CD automation.</li>
+                <li>Proficient in Java, Spring Boot, Kubernetes, Docker, and modern DevOps toolchains.</li>
+                <li>Domain expertise in E-Commerce, BFSI, Healthcare, and SDLC modernization.</li>
+                <li>Open-source contributor and advocate for best engineering practices.</li>
+              </ul>
             </p>
-
-            <b>Beyond the Code</b>
             <p>
-              When I'm not immersed in lines of code, I find joy in exploring the world of music, dabbling in computer
-              games, and even whipping up culinary delights in the kitchen. My interests are as diverse as the tech
-              landscape itself, making me an adaptable and versatile individual.
+              <b>Approach & Values:</b><br>
+              I believe in continuous learning, creative problem-solving, and fostering collaborative, agile teams. My approach combines technical excellence with a focus on business value, user experience, and long-term maintainability.
             </p>
-
-            <b> Let's Connect</b>
             <p>
-              I'm always eager to connect with fellow tech enthusiasts, learners, and collaborators. Feel free to <a
-                href="#contact">reach out to me</a>.
+              <b>Beyond Work:</b><br>
+              Outside of coding, I enjoy music, gaming, and culinary adventures. I value curiosity, adaptability, and a growth mindset in all aspects of life.
             </p>
-
+            <p>
+              <b>Let’s Connect:</b><br>
+              I welcome opportunities to collaborate, share knowledge, and build impactful solutions. <a href="#contact">Reach out to me</a> for professional networking or project discussions.
+            </p>
           </div>
         </div>
       </div>
       <script type='text/javascript'>
         var exp = timeSince(new Date("2011-02-01T00:00:00").getTime());
-        document.getElementById("experience").innerHTML = exp.year + " Years";
+        document.querySelectorAll("#experience").forEach(function(el){el.innerHTML = exp.year + " Years";});
       </script>
+    </div>
   </section>
   <!-- End About Area -->
 
   <!-- Start Job History Area Area -->
   <section class="job-area section-gap" id="history">
     <div class="container">
-      <div class="row d-flex">
+      <div class="row">
         <div class="col-lg-12">
           <div class="section-title">
             <h2>Job History</h2>
-            <p></p>
           </div>
         </div>
       </div>
-      <div class="wow fadeIn" data-wow-duration="3s" id="positions"></div>
-      <script type='text/javascript'>
-
+      <div class="timeline" id="jobTimeline"></div>
+      <script type="text/javascript">
+        // Fetch and render job history from prabhu_positions.json
+        fetch('assets/prabhu_positions.json')
+          .then(response => response.json())
+          .then(data => {
+            let html = '';
+            data.forEach((job, idx) => {
+              html += `
+                <div class="timeline-item card mb-4 shadow-sm border-0">
+                  <div class="row g-0 align-items-center">
+                    <div class="col-md-2 text-center p-3">
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                          <img src="${job.image}" alt="${job.company}" class="job-logo-img" style="width: 96px; height: 96px; object-fit: contain; background: #fffaf3; border: 3px solid var(--primary); box-shadow: 0 2px 8px rgba(0,0,0,0.10); margin-bottom: 0.5rem;">
+                          <div class="fw-bold mt-2" style="font-size: 1.05em; color: #222; text-shadow: 0 1px 2px #fff;">${job.company}</div>
+                        </div>
+                    </div>
+                    <div class="col-md-10 p-3">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-1">${job.postion}</h5>
+                        <span class="badge bg-primary">${job.startDate} - ${job.endDate}</span>
+                      </div>
+                      <div class="job-description mt-2">${job.description}</div>
+                    </div>
+                  </div>
+                </div>
+              `;
+            });
+            document.getElementById('jobTimeline').innerHTML = html;
+          });
       </script>
     </div>
   </section>
@@ -268,59 +267,48 @@
           <h2>Skills and Technologies</h2>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-3 col-md-6" style="padding-top: 20px;">
-          <div class="single-service wow fadeInUp" data-wow-duration="1s">
-            <span class="lnr lnr-screen"></span>
-            <h4>
-              <span>Frontend</span>
-            </h4>
-            <p>HTML, CSS, JS, JQuery, Angular, React JS, Thick Client RCP</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6" style="padding-top: 20px;">
-          <div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-            <i class="fa fa-cubes fa-3x" aria-hidden="true"></i>
-            <h4><span>Backend</span>
-            </h4>
-            <p>Java, Spring, Hibernate, Python, Node JS</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6" style="padding-top: 20px;">
-          <div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-            <span class="lnr lnr-database"></span>
-            <h4><span>Database</span>
-            </h4>
-            <p>Oracle, Mysql, MSSql, Postgres, Mongo</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6" style="padding-top: 20px;">
-          <div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-            <span class="lnr lnr-smartphone"></span>
-            <h4><span>Mobile</span>
-            </h4>
-            <p>Android, Cordova, Flutter</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-3 col-md-6" style="padding-top: 20px;">
-          <div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-            <i class="fa fa-refresh  fa-3x"></i>
-            <h4><span>Devops</span>
-            </h4>
-            <p>GIT, Maven, Ansible, Jenkins, JIRA, Sonar, Gradle, Docker, Helm, Kubernetes</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6" style="padding-top: 20px;">
-          <div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-            <span class="lnr lnr-cloud"></span>
-            <h4><span>Cloud</span>
-            </h4>
-            <p>AWS , Azure</p>
-          </div>
-        </div>
-      </div>
+      <div id="skillsGrid" class="row"></div>
+      <script type="text/javascript">
+        // Fetch and render skills from prabhu_skills.json
+        fetch('assets/prabhu_skills.json')
+          .then(response => response.text())
+          .then(text => {
+            // The file is not pure JSON, so we need to extract the JSON part
+            let jsonStart = text.indexOf('{');
+            let jsonEnd = text.lastIndexOf('}') + 1;
+            let jsonString = text.substring(jsonStart, jsonEnd);
+            let data = JSON.parse(jsonString);
+            let tagIcons = {
+              lang: 'fa fa-code',
+              database: 'fa fa-database',
+              frame: 'fa fa-cubes',
+              os: 'fa fa-desktop',
+              mobile: 'fa fa-mobile',
+              devops: 'fa fa-cogs',
+              cloud: 'fa fa-cloud',
+              other: 'fa fa-puzzle-piece',
+              tools: 'fa fa-wrench'
+            };
+            let html = '';
+            data.alltags.forEach(tag => {
+              html += `<div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                  <div class="card-body">
+                    <h5 class="card-title"><i class="${tagIcons[tag.name] || 'fa fa-star'}"></i> ${tag.description}</h5>
+                    <div class="d-flex flex-wrap gap-2">`;
+              data.skills.filter(skill => skill.tags.includes(tag.name)).forEach(skill => {
+                skill.name.forEach(s => {
+                  html += `<span class="badge bg-primary text-light m-1 p-2" style="font-size:1em;">${s}</span>`;
+                });
+              });
+              html += `</div>
+                  </div>
+                </div>
+              </div>`;
+            });
+            document.getElementById('skillsGrid').innerHTML = html;
+          });
+      </script>
     </div>
   </section>
   <!-- End Service Area -->
@@ -399,71 +387,71 @@
   <!-- Start Contact Area -->
   <section class="contact-area section-gap fitscreen" id="contact">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="contact-title">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="contact-title text-center mb-4">
             <h2>Contact Me</h2>
-            <p></p>
+            <p>Feel free to reach out for collaborations, consulting, or just to say hello!</p>
+          </div>
+          <div class="row g-4 mb-4">
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm border-0 text-center p-3">
+                <a href="tel:+919677625269" class="text-decoration-none text-dark">
+                  <i class="fa fa-phone fa-2x mb-2"></i>
+                  <div class="fw-bold">+91-96776-25269</div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm border-0 text-center p-3">
+                <a href="mailto:p.r.c.prabhu@gmail.com" class="text-decoration-none text-dark">
+                  <i class="fa fa-envelope fa-2x mb-2"></i>
+                  <div class="fw-bold">p.r.c.prabhu@gmail.com</div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm border-0 text-center p-3">
+                <a href="https://www.linkedin.com/in/prabhuprabhakaran/" class="text-decoration-none text-dark" target="_blank">
+                  <i class="fa fa-linkedin fa-2x mb-2"></i>
+                  <div class="fw-bold">LinkedIn</div>
+                </a>
+                <a href="https://github.com/prabhuprabhakaran" class="text-decoration-none text-dark ms-3" target="_blank">
+                  <i class="fa fa-github fa-2x mb-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="card shadow-sm border-0 p-4">
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="First Name" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="Last Name" required>
+                </div>
+                <div class="col-12">
+                  <input type="email" class="form-control" placeholder="Email Address" required>
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control" rows="4" placeholder="Message" required></textarea>
+                </div>
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-primary px-5">Send Message</button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-
-      <div class="flex" style="flex-direction: column; align-items: center;">
-        <div class="row mt-120 footer-area d-flex align-items-center">
-          <div class="contact-box footer-social">
-            <a href="tel:+919677625269">
-              <i class="fa fa-phone-square"></i></a>
-            <a href="#" id="social_whatsapp"> <i class="fa fa-whatsapp"></i></a>
-          </div>
-          <h3 style="color: whitesmoke" ;> +91-96776-25269</h3>
-          </a>
-        </div>
-        <div class="row footer-area d-flex align-items-center">
-          <div class="contact-box footer-social">
-            <a href="mailto:p.r.c.prabhu@gmail.com"> <i class="fa fa-envelope-o"></i></a>
-          </div>
-          <h3 style="color: whitesmoke" ;> p.r.c.prabhu@gmail.com</h3>
-          </a>
-        </div>
-        <div class="row footer-area d-flex align-items-center">
-          <div class="contact-box footer-social">
-            <a href="#" id="social_linkedin"> <i class="fa fa-linkedin-square"></i></a>
-            <a href="https://github.com/prabhuprabhakaran">
-              <i class="fa fa-github"></i>
-            </a>
-          </div>
-          </a>
-        </div>
-      </div>
-
-      <!-- <form action="#">
-        <div class="input-group-icon mt-10">
-          <div class="icon"><i class="fa fa-user-o" aria-hidden="true"></i></div>
-          <input type="text" name="first_name" placeholder="First Name" onfocus="this.placeholder = ''"
-            onblur="this.placeholder = 'First Name'" required class="single-input">
-        </div>
-        <div class="input-group-icon mt-10">
-          <div class="icon"><i class="fa fa-user-o" aria-hidden="true"></i></div>
-          <input type="text" name="last_name" placeholder="Last Name" onfocus="this.placeholder = ''"
-            onblur="this.placeholder = 'Last Name'" required class="single-input">
-        </div>
-        <div class="input-group-icon mt-10">
-          <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
-          <input type="email" name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''"
-            onblur="this.placeholder = 'Email Address'" required class="single-input">
-        </div>
-        <div class="mt-10">
-          <textarea class="single-textarea" placeholder="Message" onfocus="this.placeholder = ''"
-            onblur="this.placeholder = 'Message'" required></textarea>
-        </div>
-      </form> -->
     </div>
   </section>
   <!-- End Contact Area -->
 
 
   <!-- start footer Area -->
-  <footer class="footer-area" style="background-color: #e45649;padding-bottom: 0px;">
+  <footer class="footer-area" style="background-color: #f8f9fa;padding-bottom: 0px;">
     <div class="container">
       <div class="row footer-bottom justify-content-center">
         <p class="col-lg-8 col-sm-12 footer-text">
@@ -494,6 +482,27 @@
   <script src="js/vendor/superfish.min.js"></script>
   <script src="js/vendor/wow.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    // Theme toggle logic
+    const themeBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = document.getElementById('themeToggleIcon');
+    function setTheme(theme) {
+      document.body.classList.remove('theme-light', 'theme-dark');
+      document.body.classList.add(theme);
+      themeIcon.className = theme === 'theme-dark' ? 'fa fa-sun-o' : 'fa fa-moon-o';
+      localStorage.setItem('theme', theme);
+    }
+    themeBtn.addEventListener('click', () => {
+      const current = document.body.classList.contains('theme-dark') ? 'theme-dark' : 'theme-light';
+      setTheme(current === 'theme-dark' ? 'theme-light' : 'theme-dark');
+    });
+    // On load, set theme from localStorage
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if(saved === 'theme-dark' || saved === 'theme-light') setTheme(saved);
+      else setTheme('theme-light');
+    })();
+  </script>
   <script>
     // $(document).load(function () {
     //   seturl("social_whatsapp");

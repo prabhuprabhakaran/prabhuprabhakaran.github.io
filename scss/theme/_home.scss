@@ -266,11 +266,11 @@
 //--------- start job  area -------------//
 .job-area {
     &.offwhite {
-        background: $offwhite;
+        background: transparent;
     }
 }
 .single-job {
-    background-color: $offwhite;
+    background-color: transparent;
     padding: 40px 30px;
     border-radius: 10px;
     margin-bottom: 30px;
@@ -326,7 +326,7 @@
 //--------- end job area  -------------//
 //--------- Start service Area -------------//
 .service-area {
-    background: $offwhite;
+    background: transparent;
     &.white {
         background: $white;
     }
