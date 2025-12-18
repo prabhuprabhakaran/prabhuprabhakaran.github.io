@@ -1864,7 +1864,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .home-banner-area {
-  background: url(../img/banner-bg.jpg) center;
   background-size: cover;
 }
 @media (max-width: 769px) {
