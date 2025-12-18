@@ -1,0 +1,74 @@
+/*
+  Theme CSS for dark and light mode. 
+  Light: white/ivory backgrounds, dark text. 
+  Dark: dark backgrounds, light text. 
+*/
+:root {
+  --primary: #007bff;
+  --light-bg: #fffaf3;
+  --light-card: #ffffff;
+  --light-text: #222;
+  --dark-bg: #181a1b;
+  --dark-card: #23272b;
+  --dark-text: #f1f1f1;
+  --transition: background 0.3s, color 0.3s;
+  --white: #fff;
+  --red: #ff0000;
+  --offwhite: #f9f9ff;
+  --black: #000;
+  --title-color: #222222;
+  --text-color: #777777;
+}
+
+body.theme-light {
+  background: var(--light-bg);
+  color: var(--light-text);
+  transition: var(--transition);
+}
+body.theme-dark {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+  transition: var(--transition);
+  --primary: #66b3ff;
+}
+
+.theme-light .card, .theme-light .about-summary-card {
+  background: var(--light-card);
+  color: var(--light-text);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.theme-dark .card, .theme-dark .about-summary-card {
+  background: var(--dark-card);
+  color: var(--dark-text);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.theme-light .section-title h2, .theme-light h2, .theme-light h3, .theme-light h4, .theme-light h5 {
+  color: var(--primary);
+}
+.theme-dark .section-title h2, .theme-dark h2, .theme-dark h3, .theme-dark h4, .theme-dark h5 {
+  color: var(--primary);
+}
+
+.theme-toggle-btn {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.theme-toggle-btn:focus {
+  outline: 2px solid var(--white);
+}
