@@ -118,7 +118,7 @@
   <section class="home-banner-area" id="home">
     <div class="container">
       <div class="row fullscreen d-flex align-items-center">
-        <div class="about-summary-card shadow-lg p-4 mb-4 bg-white rounded text-center">
+        <div class="about-summary-card shadow-lg p-4 mb-4 rounded text-center">
             <img class="img-fluid rounded-circle mb-3" src="img/prabhu_icon.png" alt="Prabhu Prabhakaran" style="width: 160px; height: 160px; object-fit: cover; border: 4px solid var(--primary);">
             <h2 class="mb-1">Prabhu Prabhakaran</h2>
             <h5 class="text-muted mb-2">Staff Software Engineer</h5>
@@ -146,7 +146,7 @@
           <div class="section-title">
             <h2>About Me</h2>
           </div>
-          <div class="wow fadeIn" data-wow-duration="2s" style="text-align: justify;">
+          <div class="wow fadeIn" data-wow-duration="1s" style="text-align: justify;">
             <p>
               I am a passionate and results-driven software engineer with over <span id="experience"></span> of experience architecting, developing, and leading high-impact technology solutions. My expertise spans Java, DevOps, cloud-native systems, and open-source technologies, with a proven track record of delivering scalable, secure, and innovative products for global clients.
             </p>
@@ -202,12 +202,12 @@
             let html = '';
             data.forEach((job, idx) => {
               html += `
-                <div class="timeline-item card mb-4 shadow-sm border-0">
+                <div class="timeline-item card mb-4 shadow-lg border-1">
                   <div class="row g-0 align-items-center">
                     <div class="col-md-2 text-center p-3">
                         <div style="display: flex; flex-direction: column; align-items: center;">
                           <img src="${job.image}" alt="${job.company}" class="job-logo-img" style="width: 96px; height: 96px; object-fit: contain; background: #fffaf3; border: 3px solid var(--primary); box-shadow: 0 2px 8px rgba(0,0,0,0.10); margin-bottom: 0.5rem;">
-                          <div class="fw-bold mt-2" style="font-size: 1.05em; color: #222; text-shadow: 0 1px 2px #fff;">${job.company}</div>
+                          <div class="mt-2 font-weight-normal">${job.company}</div>
                         </div>
                     </div>
                     <div class="col-md-10 p-3">
@@ -398,7 +398,7 @@
               <div class="card h-100 shadow-sm border-0 text-center p-3">
                 <a href="tel:+919677625269" class="text-decoration-none text-dark">
                   <i class="fa fa-phone fa-2x mb-2"></i>
-                  <div class="fw-bold">+91-96776-25269</div>
+                  <div class="">+91-96776-25269</div>
                 </a>
               </div>
             </div>
@@ -406,7 +406,7 @@
               <div class="card h-100 shadow-sm border-0 text-center p-3">
                 <a href="mailto:p.r.c.prabhu@gmail.com" class="text-decoration-none text-dark">
                   <i class="fa fa-envelope fa-2x mb-2"></i>
-                  <div class="fw-bold">p.r.c.prabhu@gmail.com</div>
+                  <div class="">p.r.c.prabhu@gmail.com</div>
                 </a>
               </div>
             </div>
@@ -414,7 +414,7 @@
               <div class="card h-100 shadow-sm border-0 text-center p-3">
                 <a href="https://www.linkedin.com/in/prabhuprabhakaran/" class="text-decoration-none text-dark" target="_blank">
                   <i class="fa fa-linkedin fa-2x mb-2"></i>
-                  <div class="fw-bold">LinkedIn</div>
+                  <div class="">LinkedIn</div>
                 </a>
                 <a href="https://github.com/prabhuprabhakaran" class="text-decoration-none text-dark ms-3" target="_blank">
                   <i class="fa fa-github fa-2x mb-2"></i>
