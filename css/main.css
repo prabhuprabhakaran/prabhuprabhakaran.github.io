@@ -101,7 +101,16 @@ a:hover {
   outline: 0;
 }
 
-.card-panel {
+
+/**
+ *  Typography
+ *
+ **/
+.btn i,
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to a.card-panel {
   margin: 0;
   padding: 60px;
 }
@@ -2181,70 +2190,16 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-top: 40px;
   }
 }
-.contact-area .contact-title {
-  color: var(--black);
+.contact-area .section-title {
   text-align: center;
 }
-.contact-area .contact-title h2 {
-  color: var(--black);
-  position: relative;
-  margin-bottom: 45px;
-  font-size: 48px;
-  line-height: 45px;
-}
-@media (max-width: 1024px) {
-  .contact-area .contact-title h2 {
-    font-size: 40px;
-    margin-bottom: 30px;
-  }
-}
-@media (max-width: 576px) {
-  .contact-area .contact-title h2 {
-    font-size: 30px;
-  }
-}
-.contact-area .contact-title h2:before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -15px;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  width: 100px;
-  height: 2px;
-  background: var(--black);
-}
-@media (max-width: 1024px) {
-  .contact-area .contact-title h2:before {
-    bottom: -5px;
-  }
-}
-.contact-area .contact-title h2:after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -19px;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  background: var(--black);
-  width: 10px;
-  height: 10px;
-  border-radius: 8px;
-}
-@media (max-width: 1024px) {
-  .contact-area .contact-title h2:after {
-    bottom: -9px;
-  }
-}
-.contact-area .contact-title p {
-  max-width: 540px;
+.contact-area .section-title p {
   margin: 0 auto;
+}
+.contact-area .section-title h2:before,
+.contact-area .section-title h2:after {
+  left: 50%;
+  transform: translateX(-50%);
 }
 .contact-area .primary-btn {
   background: var(--black);
@@ -3276,61 +3231,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 13px;
   color: var(--light-text-color);
 }
-
-/*
-################
-               End Blog Details  Page style
-################
-*/
-.footer-area {
-  padding: 100px 0;
-}
-@media (max-width: 1024px) {
-  .footer-area {
-    padding: 60px 0;
-  }
-}
-.footer-area .footer-logo {
-  text-align: center;
-}
-.footer-area .footer-logo h4 {
-  font-size: 21px;
-  color: var(--text-color);
-  font-weight: 700;
-  margin-top: 48px;
-}
-.footer-area .footer-social {
-  text-align: center;
-  margin: 25px 0px 50px;
-}
-@media (max-width: 1024px) {
-  .footer-area .footer-social {
-    margin: 15px 0px 30px;
-  }
-}
-.footer-area .footer-social a {
-  padding: 0 20px;
-}
-.footer-area .footer-social a i {
-  color: var(--medium-gray);
-  font-size: 36px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-@media (max-width: 576px) {
-  .footer-area .footer-social a i {
-    font-size: 25px;
-  }
-}
-.footer-area .footer-social a i:hover {
-  color: var(--primary);
-}
-.footer-area .footer-bottom {
-  text-align: center;
-}
-.footer-area .footer-bottom p {
+.foooter-area .footer-bottom p {
   margin-bottom: 0;
 }
 .footer-area .footer-bottom a {

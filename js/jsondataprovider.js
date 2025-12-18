@@ -71,7 +71,7 @@ async function loadJobHistory() {
 
 //------------------------------------------------------------------------------------//
 function timeSince(date_future) {
-  const seconds = Math.abs(date_future - new Date()) / 1000;
+  var seconds = Math.abs(date_future - new Date()) / 1000;
   const intervals = {
     year: 31536000,
     month: 2592000,
@@ -108,6 +108,7 @@ async function seturl(id) {
 
     const platform = WURFL.is_mobile ? "mobile" : "desktop";
     const url = mySocialLinks[platform]?.[id];
+    console.log(`Setting URL for ${id}: ${url}`);
     if (url) {
       document.getElementById(id).setAttribute("href", url);
     } else {

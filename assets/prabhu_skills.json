@@ -1,64 +1,64 @@
-skillset='{\
-    "alltags": [{\
-            "name": "lang",\
-            "description": "Lang/Script"\
-        }, {\
-            "name": "database",\
-            "description": "Database"\
-        }, {\
-            "name": "frame",\
-            "description": "Frameworks"\
-        }, {\
-            "name": "os",\
-            "description": "Operating Systems"\
-        }, {\
-            "name": "mobile",\
-            "description": "MobileTechnologies"\
-        }, {\
-            "name": "devops",\
-            "description": "Devops"\
-        }, {\
-            "name": "cloud",\
-            "description": "CloudApps"\
-        }, {\
-            "name": "other",\
-            "description": "Other"\
-        }\
-    ],\
-    "skills": [{\
-            "name": ["Java(J2se/J2ee)", "Shell (Linux)", "Batch (Windows)", "Dart", "Python", "JavaScript", "PHP", "CSS", "HTML", "Groovy"],\
-            "tags": ["all", "lang"]\
-        }, {\
-            "name": ["JSP/Servlets","JQuery", "Angular (7 & 8)", "Angularjs"],\
-            "tags": ["all","lang", "frame"]\
-        }, {\
-            "name": ["Windows", "Linux", "Android", "Basics (zLinux/zOS)"],\
-            "tags": ["all", "os"]\
-        }, {\
-            "name": ["Struts", "Spring", "Yii", "Hibernate", "nodejs"],\
-            "tags": ["all", "frame"]\
-        }, {\
-            "name": ["Oracle", "MySql", "Hsqldb", "Sqlite", "Derby", "Postgres", "Mongo", "MSSQL"],\
-            "tags": ["all", "database"]\
-        }, {\
-            "name": ["Netbeans RCP", "Eclipse RCP/SWT", "Swing Application Framework"],\
-            "tags": ["all", "frame", "other"]\
-        }, {\
-            "name": ["VSS", "SVN", "GIT", "ANT", "Maven", "Jenkins", "Docker", "Gradle", "Ansible", "JIRA", "Kube", "Helm"],\
-            "tags": ["all", "tools", "devops"]\
-        }, {\
-            "name": ["AWS EC2", "AWS Lambda", "AWS SNS", "AWS S3", "AWS API Gateway", "AWS Route53", "Azure"],\
-            "tags": ["all", "cloud"]\
-        }, {\
-            "name": ["Blackberry", "Android SDK (Java)", "Android NDK", "Cordova", "Flutter"],\
-            "tags": ["all", "mobile"]\
-        }, {\
-            "name": ["JMX", "JMS", "TCP", "UDP", "NIO", "SOAP", "REST", "MQTT", "Lucene", "Hazelcast", "ETL (Clover & Pentaho)",\
-                 "JBPM", "DROOLS", "JSON", "MONO", "Fix&Fast", "EDI", "HL7", "ISO8583", "Swift MT", "SECS/GEM", "Swagger", "XML", "YAML", "JSON"],\
-            "tags": ["all", "other"]\
-        }, {\
-            "name": ["Tomcat", "Jetty", "ActiveMQ", "JBoss/Wildfly", "Junit", "JMeter", "NSIS"],\
-            "tags": ["all", "tools"]\
-        }\
-    ]\
+skillset='{
+    "alltags": [{
+            "name": "lang",
+            "description": "Lang/Script"
+        }, {
+            "name": "database",
+            "description": "Database"
+        }, {
+            "name": "frame",
+            "description": "Frameworks"
+        }, {
+            "name": "os",
+            "description": "Operating Systems"
+        }, {
+            "name": "mobile",
+            "description": "MobileTechnologies"
+        }, {
+            "name": "devops",
+            "description": "Devops"
+        }, {
+            "name": "cloud",
+            "description": "CloudApps"
+        }, {
+            "name": "other",
+            "description": "Other"
+        }
+    ],
+    "skills": [{
+            "name": ["Java(J2se/J2ee)", "Shell (Linux)", "Batch (Windows)", "Dart", "Python", "JavaScript", "PHP", "CSS", "HTML", "Groovy"],
+            "tags": ["all", "lang"]
+        }, {
+            "name": ["JSP/Servlets","JQuery", "Angular (7 & 8)", "Angularjs"],
+            "tags": ["all","lang", "frame"]
+        }, {
+            "name": ["Windows", "Linux", "Android", "Basics (zLinux/zOS)"],
+            "tags": ["all", "os"]
+        }, {
+            "name": ["Struts", "Spring", "Yii", "Hibernate", "nodejs"],
+            "tags": ["all", "frame"]
+        }, {
+            "name": ["Oracle", "MySql", "Hsqldb", "Sqlite", "Derby", "Postgres", "Mongo", "MSSQL"],
+            "tags": ["all", "database"]
+        }, {
+            "name": ["Netbeans RCP", "Eclipse RCP/SWT", "Swing Application Framework"],
+            "tags": ["all", "frame", "other"]
+        }, {
+            "name": ["VSS", "SVN", "GIT", "ANT", "Maven", "Jenkins", "Docker", "Gradle", "Ansible", "JIRA", "Kube", "Helm"],
+            "tags": ["all", "tools", "devops"]
+        }, {
+            "name": ["AWS EC2", "AWS Lambda", "AWS SNS", "AWS S3", "AWS API Gateway", "AWS Route53", "Azure"],
+            "tags": ["all", "cloud"]
+        }, {
+            "name": ["Blackberry", "Android SDK (Java)", "Android NDK", "Cordova", "Flutter"],
+            "tags": ["all", "mobile"]
+        }, {
+            "name": ["JMX", "JMS", "TCP", "UDP", "NIO", "SOAP", "REST", "MQTT", "Lucene", "Hazelcast", "ETL (Clover & Pentaho)",
+                 "JBPM", "DROOLS", "JSON", "MONO", "Fix&Fast", "EDI", "HL7", "ISO8583", "Swift MT", "SECS/GEM", "Swagger", "XML", "YAML", "JSON"],
+            "tags": ["all", "other"]
+        }, {
+            "name": ["Tomcat", "Jetty", "ActiveMQ", "JBoss/Wildfly", "Junit", "JMeter", "NSIS"],
+            "tags": ["all", "tools"]
+        }
+    ]
 }';
