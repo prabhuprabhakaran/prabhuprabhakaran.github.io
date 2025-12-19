@@ -394,7 +394,7 @@ th {
 }
 #back-top {
   position: fixed;
-  bottom: 0rem;
+  bottom: 1rem;
   right: 1rem !important;
   cursor: pointer;
   z-index: 9999999;
