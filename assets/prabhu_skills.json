@@ -1,64 +1,71 @@
 skillset='{
     "alltags": [{
-            "name": "lang",
-            "description": "Lang/Script"
+            "name": "backend",
+            "description": "Backend"
+        },{
+            "name": "frame",
+            "description": "Frameworks"
+        },{
+            "name": "ai",
+            "description": "Artificial Intelligence"
+        }, {
+            "name": "ui",
+            "description": "UI"
+        }, {
+            "name": "cloud",
+            "description": "Cloud Platforms"
+        }, {
+            "name": "devops",
+            "description": "Devops"
         }, {
             "name": "database",
             "description": "Database"
-        }, {
-            "name": "frame",
-            "description": "Frameworks"
         }, {
             "name": "os",
             "description": "Operating Systems"
         }, {
             "name": "mobile",
-            "description": "MobileTechnologies"
-        }, {
-            "name": "devops",
-            "description": "Devops"
-        }, {
-            "name": "cloud",
-            "description": "CloudApps"
-        }, {
+            "description": "Mobile Technologies"
+        },   {
             "name": "other",
             "description": "Other"
         }
     ],
     "skills": [{
-            "name": ["Java(J2se/J2ee)", "Shell (Linux)", "Batch (Windows)", "Dart", "Python", "JavaScript", "PHP", "CSS", "HTML", "Groovy"],
-            "tags": ["all", "lang"]
+            "name": ["Java", "Shell (Linux)", "Batch (Windows)", "Python", "Groovy", "nodejs"],
+            "tags": ["backend"]
         }, {
-            "name": ["JSP/Servlets","JQuery", "Angular (7 & 8)", "Angularjs"],
-            "tags": ["all","lang", "frame"]
+            "name": ["JSP/Servlets","JQuery", "JavaScript", "CSS", "HTML","React", "Angular (7 & 8)", "Angularjs"],
+            "tags": ["ui"]
         }, {
             "name": ["Windows", "Linux", "Android", "Basics (zLinux/zOS)"],
-            "tags": ["all", "os"]
+            "tags": ["os"]
         }, {
-            "name": ["Struts", "Spring", "Yii", "Hibernate", "nodejs"],
-            "tags": ["all", "frame"]
+            "name": ["Pydantic", "ADK", "Spring AI", "Langchain"],
+            "tags": ["ai"]
+        },{
+            "name": ["Struts", "Spring", "Hibernate", "nodejs"],
+            "tags": ["frame"]
         }, {
             "name": ["Oracle", "MySql", "Hsqldb", "Sqlite", "Derby", "Postgres", "Mongo", "MSSQL"],
-            "tags": ["all", "database"]
+            "tags": ["database"]
         }, {
-            "name": ["Netbeans RCP", "Eclipse RCP/SWT", "Swing Application Framework"],
-            "tags": ["all", "frame", "other"]
+            "name": ["Kafka","JBPM", "DROOLS", "Camunda", "Clover ETL", "Netbeans RCP", "Eclipse RCP/SWT", "Swing Application Framework"],
+            "tags": ["other"]
         }, {
             "name": ["VSS", "SVN", "GIT", "ANT", "Maven", "Jenkins", "Docker", "Gradle", "Ansible", "JIRA", "Kube", "Helm"],
-            "tags": ["all", "tools", "devops"]
+            "tags": ["devops"]
         }, {
-            "name": ["AWS EC2", "AWS Lambda", "AWS SNS", "AWS S3", "AWS API Gateway", "AWS Route53", "Azure"],
-            "tags": ["all", "cloud"]
+            "name": ["AWS", "Azure"],
+            "tags": ["cloud"]
         }, {
-            "name": ["Blackberry", "Android SDK (Java)", "Android NDK", "Cordova", "Flutter"],
-            "tags": ["all", "mobile"]
+            "name": ["Blackberry", "Android SDK (Java)", "Android NDK", "Cordova", "Flutter Basics"],
+            "tags": ["mobile"]
         }, {
             "name": ["JMX", "JMS", "TCP", "UDP", "NIO", "SOAP", "REST", "MQTT", "Lucene", "Hazelcast", "ETL (Clover & Pentaho)",
-                 "JBPM", "DROOLS", "JSON", "MONO", "Fix&Fast", "EDI", "HL7", "ISO8583", "Swift MT", "SECS/GEM", "Swagger", "XML", "YAML", "JSON"],
-            "tags": ["all", "other"]
-        }, {
-            "name": ["Tomcat", "Jetty", "ActiveMQ", "JBoss/Wildfly", "Junit", "JMeter", "NSIS"],
-            "tags": ["all", "tools"]
+                 "JBPM", "DROOLS", "JSON", "MONO", "Fix&Fast", "EDI", "HL7", "ISO8583", "Swift MT", "SECS/GEM", "Swagger", "XML", "YAML", "JSON",
+                 "Tomcat", "Jetty", "ActiveMQ", "JBoss/Wildfly", "Junit", "JMeter", "NSIS"],
+            "tags": ["tools"]
         }
     ]
 }';

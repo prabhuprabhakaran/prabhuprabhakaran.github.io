@@ -44,14 +44,6 @@ $(document).ready(function () {
         return false;
     });
 
-    //------- Niceselect  js --------//  
-
-    // if (document.getElementById("default-select")) {
-    //     $('select').niceSelect();
-    // };
-    // if (document.getElementById("service-select")) {
-    //     $('select').niceSelect();
-    // };
 
     //------- Pre Loader --------//  
     $(window).on('load', function () {
@@ -66,111 +58,7 @@ $(document).ready(function () {
         // $('html, body').hide();
     });
 
-    //------- Lightbox  js --------//  
-    // $('.img-gal').magnificPopup({
-    //     type: 'image',
-    //     gallery: {
-    //         enabled: true
-    //     }
-    // });
-
-
-    // $('.play-btn').magnificPopup({
-    //     type: 'iframe',
-    //     mainClass: 'mfp-fade',
-    //     removalDelay: 160,
-    //     preloader: false,
-    //     fixedContentPos: false
-    // });
-
-    //------- Filter  js --------//  
-    // $(window).on("load", function () {
-    //     $('.filters ul li').on("click", function () {
-    //         $('.filters ul li').removeClass('active');
-    //         $(this).addClass('active');
-
-    //         var data = $(this).attr('data-filter');
-    //         $grid.isotope({
-    //             filter: data
-    //         })
-    //     });
-
-
-    //     if (document.getElementById("work")) {
-    //         var $grid = $(".grid").isotope({
-    //             itemSelector: ".all",
-    //             percentPosition: true,
-    //             masonry: {
-    //                 columnWidth: ".all"
-    //             }
-    //         })
-    //     };
-    // });
-
-    //------- Accordion  js --------//  
-
-    // jQuery(document).ready(function ($) {
-
-    //     if (document.getElementById("accordion")) {
-
-    //         var accordion_1 = new Accordion(document.getElementById("accordion"), {
-    //             collapsible: false,
-    //             slideDuration: 500
-    //         });
-    //     }
-    // });
-
-    //------- Circle Chart  js --------//  
-
-    // if (document.getElementById("skills")) {
-
-    //     $('.skill-1').percentcircle({
-    //         animate: true,
-    //         diameter: 400,
-    //         guage: 5,
-    //         coverBg: '#fff',
-    //         bgColor: '#efefef',
-    //         fillColor: '#988fff',
-    //         percentSize: '24px',
-    //         percentWeight: 'normal'
-    //     });
-
-    //     $('.skill-2').percentcircle({
-    //         animate: true,
-    //         diameter: 400,
-    //         guage: 5,
-    //         coverBg: '#fff',
-    //         bgColor: '#efefef',
-    //         fillColor: '#988fff',
-    //         percentSize: '24px',
-    //         percentWeight: 'normal'
-    //     });
-
-    //     $('.skill-3').percentcircle({
-    //         animate: true,
-    //         diameter: 400,
-    //         guage: 5,
-    //         coverBg: '#fff',
-    //         bgColor: '#efefef',
-    //         fillColor: '#988fff',
-    //         percentSize: '24px',
-    //         percentWeight: 'normal'
-    //     });
-
-    //     $('.skill-4').percentcircle({
-    //         animate: true,
-    //         diameter: 400,
-    //         guage: 5,
-    //         coverBg: '#fff',
-    //         bgColor: '#efefef',
-    //         fillColor: '#988fff',
-    //         percentSize: '24px',
-    //         percentWeight: 'normal'
-    //     });
-
-    // };
-
-    //------- Superfist nav menu  js --------//  
+    
 
     $('.nav-menu').superfish({
         animation: {

@@ -4,77 +4,64 @@
   Dark: dark backgrounds, light text. 
 */
 :root {
+  --dark-purple: #715f69;
+  --light-red: #e2a599;
   --accent-blue: #90acd1;
-  --black: #000;
-  --blue: #38a4ff;
-  --cyan: #4cd3e3;
-  --danger-red: #f44a40;
+
   --dark-bg: #181a1b;
   --dark-border: #333;
   --dark-card: #23272b;
   --dark-primary: #66b3ff;
-  --dark-purple: #715f69;
   --dark-text-color: #f1f1f1;
-  --dark-text: #f1f1f1;
   --dark-title-color: #f1f1f1;
-  --gold: #f1cd09;
-  --gray: #797979;
-  --input-border: #ced4da;
-  --light-bg-alt: #f9fafc;
+
   --light-bg: #fffaf3;
-  --light-blue-bg: #edf3fd;
   --light-border: #f1f1f1;
   --light-card: #ffffff;
-  --light-gray: #eee;
   --light-primary: #007bff;
-  --light-red: #e2a599;
-  --light-text-color: #777777;
-  --light-text: #222;
+  --light-text-color: #222;
   --light-title-color: #222222;
-  --medium-gray: #ccc;
-  --offwhite: #f9f9ff;
-  --red-orange: #eb6b55;
-  --red: #ff0000;
-  --skill-blue: #6382e6;
-  --skill-green: #73fbaf;
-  --skill-orange: #f09359;
-  --skill-pink: #e66686;
-  --skill-purple: #a367e7;
-  --success-green: #008000;
-  --transition: background 0.3s, color 0.3s;
-  --very-light-gray: #fafaff;
-  --warning-yellow: #f4e700;
+
+  --black: #000;
   --white: #fff;
+
+  --transition: background 0.3s, color 0.3s;
 }
 
 body.theme-light {
-  background: var(--light-bg);
-  color: var(--light-text);
-  transition: var(--transition);
+  --back-top-arrow-color: var(--white);
+  --back-top-color: var(--accent-blue);
+  --border-color: var(--light-border);
+  --nav-scrolled-bg-color: var(--white);
+  --nav-text-color: var(--black);
   --primary: var(--light-primary);
   --text-color: var(--light-text-color);
   --title-color: var(--light-title-color);
-  --border-color: var(--light-border);
-  --nav-text-color: var(--black);
+  background: var(--light-bg);
+  color: var(--light-text-color);
+  transition: var(--transition);
 }
 
 body.theme-dark {
-  background: var(--dark-bg);
-  color: var(--dark-text);
-  transition: var(--transition);
+  --back-top-arrow-color: var(--dark-bg);
+  --back-top-color: var(--accent-blue);
+  --border-color: var(--dark-border);
+  --nav-scrolled-bg-color: var(--black);
+  --nav-text-color: var(--white);
   --primary: var(--dark-primary);
   --text-color: var(--dark-text-color);
   --title-color: var(--dark-title-color);
-  --border-color: var(--dark-border);
-  --nav-text-color: var(--white);
+  background: var(--dark-bg);
+  color: var(--dark-text-color);
+  transition: var(--transition);
 }
 
 .theme-dark .header-scrolled .container .row nav .nav-menu .nav-head a {
-  --nav-text-color: var(--light-text-color);
+  --nav-text-color: var(--white);
 }
 
 .theme-light .header-scrolled .container .row nav .nav-menu .nav-head a {
-  --nav-text-color: var(--dark-text-color);
+  --nav-text-color: var(--black);
 }
 
 .theme-light .card,
@@ -86,7 +73,7 @@ body.theme-dark {
 .theme-dark .card,
 .theme-dark .about-summary-card {
   background: var(--dark-card);
-  color: var(--dark-text);
+  color: var(--dark-text-color);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
 }
 
@@ -135,5 +122,5 @@ body.theme-dark {
 
 .theme-dark .footer-area {
   background-color: var(--dark-bg);
-  color: var(--dark-text);
+  color: var(--dark-text-color);
 }
