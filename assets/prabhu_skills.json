@@ -44,7 +44,7 @@ skillset='{
             "name": ["Pydantic", "ADK", "Spring AI", "Langchain"],
             "tags": ["ai"]
         },{
-            "name": ["Struts", "Spring", "Hibernate", "nodejs"],
+            "name": ["Struts", "Spring Boot", "Hibernate", "nodejs"],
             "tags": ["frame"]
         }, {
             "name": ["Oracle", "MySql", "Hsqldb", "Sqlite", "Derby", "Postgres", "Mongo", "MSSQL"],

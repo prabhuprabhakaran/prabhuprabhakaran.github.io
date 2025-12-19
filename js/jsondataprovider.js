@@ -19,55 +19,6 @@ if (WURFL.is_mobile === true) {
   skills_count = 9;
 }
 
-//------------------------------------------------------------------------------------//
-async function loadJobHistory() {
-  try {
-    const response = await fetch("./assets/prabhu_positions.json");
-    if (!response.ok) throw new Error("Failed to fetch job history data");
-
-    const myPositions = await response.json();
-    const popupHTML = [];
-    const positionsHTML = myPositions.map((position) => {
-      popupHTML.push(`
-        <div id="popup_${position.id}" class="overlay">
-          <div class="popup">
-            <h2>${position.company}</h2>
-            <strong>${position.postion}</strong>
-            <a class="close" href="#history">&times;</a>
-            <div class="content">${position.description}</div>
-          </div>
-        </div>`);
-
-      return `
-        <div class="col-lg-6">
-          <a href="#popup_${position.id}">
-            <div class="single-job">
-              <div class="row d-flex justify-content-between">
-                <div class="col-8">
-                  <h5>${position.postion}</h5>
-                  ${position.company}<br/>
-                  <strong>${position.startDate} to ${position.endDate}</strong>
-                </div>
-                <div class="col-4">
-                  <div class="pull-right">
-                    <img src="${position.image}" width="100" alt="${position.company}"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>`;
-    });
-
-    document.getElementById("positions").innerHTML = `
-      <div class="row">
-        ${positionsHTML.join("")}
-        ${popupHTML.join("")}
-      </div>`;
-  } catch (error) {
-    console.error("Error loading job history:", error);
-  }
-}
 
 //------------------------------------------------------------------------------------//
 function timeSince(date_future) {
