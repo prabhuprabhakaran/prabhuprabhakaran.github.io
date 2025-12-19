@@ -41,7 +41,7 @@ skillset='{
             "name": ["Windows", "Linux", "Android", "Basics (zLinux/zOS)"],
             "tags": ["os"]
         }, {
-            "name": ["Pydantic", "ADK", "Spring AI", "Langchain"],
+            "name": ["Pydantic", "Google ADK", "Spring AI", "LangChain","LangGraph", "MCP", "ollama"],
             "tags": ["ai"]
         },{
             "name": ["Struts", "Spring Boot", "Hibernate", "nodejs"],
@@ -53,7 +53,7 @@ skillset='{
             "name": ["Kafka","JBPM", "DROOLS", "Camunda", "Clover ETL", "Netbeans RCP", "Eclipse RCP/SWT", "Swing Application Framework"],
             "tags": ["other"]
         }, {
-            "name": ["VSS", "SVN", "GIT", "ANT", "Maven", "Jenkins", "Docker", "Gradle", "Ansible", "JIRA", "Kube", "Helm"],
+            "name": [ "GIT", "Maven", "NPM", "Gradle", "Jenkins", "Docker", "Ansible", "JIRA", "Kube", "Helm","Terraform", "Prometheus", "Grafana",  "Artifactory", "Splunk"],
             "tags": ["devops"]
         }, {
             "name": ["AWS", "Azure"],
