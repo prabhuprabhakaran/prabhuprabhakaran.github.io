@@ -67,7 +67,7 @@ body.theme-dark {
 .theme-light .card,
 .theme-light .about-summary-card {
   background: var(--light-card);
-  color: var(--light-text);
+  color: var(--light-text-color);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 .theme-dark .card,
@@ -117,7 +117,7 @@ body.theme-dark {
 
 .theme-light .footer-area {
   background-color: var(--light-bg);
-  color: var(--light-text);
+  color: var(--light-text-color);
 }
 
 .theme-dark .footer-area {

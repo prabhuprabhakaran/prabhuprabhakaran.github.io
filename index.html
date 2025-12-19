@@ -29,7 +29,9 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
 
   <link rel="stylesheet" href="css/linearicons.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/main.css">
@@ -56,7 +58,7 @@
 
 <body class="theme-dark">
   <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle dark/light mode">
-    <span id="themeToggleIcon" class="fa fa-moon-o"></span>
+    <span id="themeToggleIcon" class="fa fa-light fa-moon"></span>
   </button>
   <div class="preloader-area">
     <div class="loader-box">
@@ -106,10 +108,11 @@
           <h5 class="text-muted mb-2">Staff Software Engineer</h5>
           <div class="mb-2"><span id="experience"></span> Experience</div>
           <div class="d-flex justify-content-center gap-2">
-            <a href="mailto:p.r.c.prabhu@gmail.com" class="fa fa-envelope card-link mx-2"></a>
-            <a href="tel:+919677625269" class="fa fa-phone card-link mx-2"></a>
-            <a href="https://www.linkedin.com/in/prabhuprabhakaran/" class="fa fa-linkedin card-link mx-2"></a>
-            <a href="https://github.com/prabhuprabhakaran" class="fa fa-github card-link mx-2"></a>
+            <a href="mailto:p.r.c.prabhu@gmail.com" class="fa fa-light fa-envelope card-link mx-2"></a>
+            <a href="tel:+919677625269" class="fa fa-light fa-phone card-link mx-2"></a>
+            <a href="https://www.linkedin.com/in/prabhuprabhakaran/"
+              class="fa fa-brands fa-linkedin card-link mx-2"></a>
+            <a href="https://github.com/prabhuprabhakaran" class="fa fa-brands fa-github card-link mx-2"></a>
           </div>
         </div>
       </div>
@@ -195,7 +198,7 @@
                       <div class="d-flex flex-column">
                         <div class="d-flex align-items-center justify-content-between pr-5">
                           <h3 class="mt-2 font-weight-normal">${job.company}</h3>
-                          <span class="badge bg-primary">${job.startDate} - ${job.endDate}</span>
+                          <span class="badge bg-primary text-white">${job.startDate} - ${job.endDate}</span>
                         </div>
                         <h5 class="mb-1">${job.postion}</h5>
                       </div>
@@ -231,26 +234,28 @@
             let jsonString = text.substring(jsonStart, jsonEnd);
             let data = JSON.parse(jsonString);
             let tagIcons = {
-              lang: 'fa fa-code',
-              database: 'fa fa-database',
-              frame: 'fa fa-cubes',
-              os: 'fa fa-desktop',
-              mobile: 'fa fa-mobile',
-              devops: 'fa fa-cogs',
+              ai: 'fa fa-robot',
+              backend: 'fa fa-code',
               cloud: 'fa fa-cloud',
+              database: 'fa fa-database',
+              devops: 'fa fa-cogs',
+              frame: 'fa fa-cubes',
+              mobile: 'fa fa-mobile',
+              os: 'fa fa-desktop',
               other: 'fa fa-puzzle-piece',
-              tools: 'fa fa-wrench'
+              tools: 'fa fa-wrench',
+              ui: 'fa fa-paint-brush',
             };
             let html = '';
             data.alltags.forEach(tag => {
-              html += `<div class="col-md-6 col-lg-4 mb-4 single-service">
+              html += `<div class="col-md-6 col-lg-4 mb-4">
                 <div class="card h-100 shadow-lg border-2">
                   <div class="card-body">
                     <h5 class="card-title"><i class="${tagIcons[tag.name] || 'fa fa-star'}"></i> ${tag.description}</h5>
                     <div class="d-flex flex-wrap gap-2">`;
               data.skills.filter(skill => skill.tags.includes(tag.name)).forEach(skill => {
                 skill.name.forEach(s => {
-                  html += `<span class="badge bg-primary text-light m-1 p-2" style="font-size:1em;">${s}</span>`;
+                  html += `<span class="badge badge-pill bg-primary text-white mr-1 mb-2">${s}</span>`;
                 });
               });
               html += `</div>
@@ -275,7 +280,7 @@
           <div class="col-md-3">
             <div class="card h-100 shadow-lg border-2 text-center p-3">
               <a href="tel:+919677625269" class="text-decoration-none">
-                <i class="fa fa-phone fa-2x mb-2"></i>
+                <i class="fa fa-light fa-phone fa-2x mb-2"></i>
                 <div class="">+91-96776-25269</div>
               </a>
             </div>
@@ -283,7 +288,7 @@
           <div class="col-md-3">
             <div class="card h-100 shadow-lg border-2 text-center p-3">
               <a href="mailto:p.r.c.prabhu@gmail.com" class="text-decoration-none">
-                <i class="fa fa-envelope fa-2x mb-2"></i>
+                <i class="fa fa-light fa-envelope fa-2x mb-2"></i>
                 <div class="">p.r.c.prabhu@gmail.com</div>
               </a>
             </div>
@@ -291,7 +296,7 @@
           <div class="col-md-3">
             <div class="card h-100 shadow-lg border-2 text-center p-3">
               <a href="https://www.linkedin.com/in/prabhuprabhakaran/" class="text-decoration-none" target="_blank">
-                <i class="fa fa-linkedin fa-2x mb-2"></i>
+                <i class="fa fa-brands fa-linkedin fa-2x mb-2"></i>
                 <div class="">LinkedIn</div>
               </a>
             </div>
@@ -299,7 +304,7 @@
           <div class="col-md-3">
             <div class="card h-100 shadow-lg border-2 text-center p-3">
               <a href="https://github.com/prabhuprabhakaran" class="text-decoration-none" target="_blank">
-                <i class="fa fa-github fa-2x mb-2"></i>
+                <i class="fa fa-brands fa-github fa-2x mb-2"></i>
                 <div class="">GitHub</div>
               </a>
             </div>
@@ -324,7 +329,7 @@
 
   <div id="back-top">
     <a title="Go to Top" href="#">
-      <i class="lnr lnr-arrow-up"></i>
+      <i class="fa-solid fa-arrow-up"></i>
     </a>
   </div>
   <script src="js/vendor/jquery-2.2.4.min.js"></script>
@@ -343,7 +348,7 @@
     function setTheme(theme) {
       document.body.classList.remove('theme-light', 'theme-dark');
       document.body.classList.add(theme);
-      themeIcon.className = theme === 'theme-dark' ? 'fa fa-sun-o' : 'fa fa-moon-o';
+      themeIcon.className = theme === 'theme-dark' ? 'fa fa-light fa-sun' : 'fa fa-light fa-moon';
       localStorage.setItem('theme', theme);
     }
     themeBtn.addEventListener('click', () => {

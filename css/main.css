@@ -127,7 +127,6 @@ a:hover {
   line-height: inherit;
 }
 
-
 h1,
 h2,
 h3,
@@ -419,7 +418,7 @@ th {
   width: 35px;
   height: 40px;
   border-radius: 5px 5px 0 0;
-  padding: 12px 8px 8px 7px;
+  padding: 10px 0px 0px 0px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
