@@ -37,7 +37,6 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/theme/theme-toggle.css">
-  <link rel="stylesheet" href="css/theme/theme-contrast-fix.css">
 
   <script async type='text/javascript' src="https://www.googletagmanager.com/gtag/js?id=UA-158737439-1"></script>
   <script>
@@ -52,8 +51,6 @@
   <script type="text/javascript" src="js/jsondataprovider.js"></script>
   <script disable-devtool-auto-1
     src='https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'></script>
-  <script async type='text/javascript'
-    src='https://platform-api.sharethis.com/js/sharethis.js#property=6156be0846199d0019177890&product=sop'></script>
 </head>
 
 <body class="theme-dark">
@@ -115,7 +112,9 @@
               class="fa fa-brands fa-linkedin card-link mx-2"></a>
             <a href="https://github.com/prabhuprabhakaran" class="fa fa-brands fa-github card-link mx-2"></a>
           </div>
-        </div>
+          <div class="mt-3">
+            <a href="./assets/prabhu_resume.pdf" download class="btn btn-primary">Download Resume</a>
+          </div>
       </div>
     </div>
   </section>
@@ -291,7 +290,7 @@
     </div>
   </section>
 
-  <section class="contact-area section-gap fitscreen" id="contact">
+  <section class="contact-area section-gap" id="contact">
     <div class="container">
       <div class="col-lg-12">
         <div class="section-title">
@@ -354,9 +353,10 @@
       <div class="row footer-bottom text-center">
         <p class="col-md-12 col-sm-12">
           Copyright &copy;
-          <script>document.write(new Date().getFullYear());</script> All rights reserved | <i class="fa fa-heart"
+          <span id="yearSpan"></span> All rights reserved | <i class="fa fa-heart"
             aria-hidden="true"></i> by <a href="https://prabhuprabhakaran.info" target="_blank">Prabhu Prabhakaran</a>
         </p>
+        <script>document.getElementById('yearSpan').textContent = new Date().getFullYear();</script>
       </div>
     </div>
   </footer>
