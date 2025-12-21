@@ -10,7 +10,7 @@
   },
   {
     "id": "2",
-    "company": "Walmart, Chennai, IN",
+    "company": "Walmart Global Tech, Chennai, IN",
     "image": "img/walmart.png",
     "position": "Staff Software Engineer",
     "startDate": "Jul '20",
@@ -19,7 +19,7 @@
   },
   {
     "id": "3",
-    "company": "TPF Software, Chennai, IN",
+    "company": "TPF Software Inc., Chennai, IN",
     "image": "img/tpf.png",
     "position": "Technical Lead",
     "startDate": "May '15",
@@ -42,7 +42,7 @@
     "position": "Software Engineer",
     "startDate": "Oct '11",
     "endDate": "Jan '14",
-    "description": "<strong>Industry: </strong>BFSI Trading (Equity, FO, Options, MCX, Currencies, Derivatives), Healthcare, and Insurance<br/><strong>Projects: </strong>Dolphin Trading System, Healthfirst Financial"
+    "description": "<strong>Industry: </strong>BFSI Trading (Equity, F&O), Healthcare, and Insurance<br/><strong>Projects: </strong>Dolphin Trading System, Healthfirst Financial"
   },
   {
     "id": "6",
@@ -51,6 +51,6 @@
     "position": "Software Trainee",
     "startDate": "Feb '11",
     "endDate": "Sep '11",
-    "description": "<strong>Industry: </strong><br/><strong>Projects: </strong>"
+    "description": "<strong>Industry: </strong>BFSI<br/><strong>Projects: </strong>Internal Projects and Training"
   }
 ]
