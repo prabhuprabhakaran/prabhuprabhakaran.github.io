@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prabhu Prabhakaran's Resume</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://unpkg.com/page-flip/dist/js/page-flip.browser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+    <style>
+        :root {
+            --bg-1: #0f172a;
+            --bg-2: #1e293b;
+            --card: #0b1220;
+            --ink: #e5e7eb;
+            --muted: #94a3b8;
+            --accent: #38bdf8;
+            --paper-edge: #d7dce3;
+            --paper-shadow: rgba(15, 23, 42, 0.28);
+            --radius: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            color: #0f172a;
+            background: #ffffff;
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+
+        .app {
+            width: 100vw;
+            height: 100vh;
+            padding-top: 60px;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-menu {
+            padding-top: 10px;
+        }
+
+        #header {
+            padding: 0px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 997;
+            transition: ease-in-out 1s;
+            border-bottom: 1px solid #e2e8f0;
+            background: #ffffff;
+        }
+
+        #logo {
+            margin-left: 15px;
+        }
+
+        #header #logo img {
+            padding: 0;
+            margin: 0;
+        }
+
+        .avatar {
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .header-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            gap: 12px;
+        }
+
+        
+
+        .header-controls {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+            margin-left: auto;
+        }
+
+        button,
+        select,
+        .download-link {
+            border: 1px solid #cbd5e1;
+            background: #f8fafc;
+            color: #0f172a;
+            padding: 7px 11px;
+            font-size: 13px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.16s ease, background 0.16s ease, border-color 0.16s ease;
+            text-decoration: none;
+        }
+
+        .download-link {
+            background: #2563eb;
+            border-color: #1d4ed8;
+            color: #ffffff;
+        }
+
+        button:hover,
+        select:hover,
+        .download-link:hover {
+            transform: translateY(-1px);
+            border-color: #0ea5e9;
+            background: #eef6ff;
+        }
+
+        .download-link:hover {
+            border-color: #1e40af;
+            background: #1d4ed8;
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .page-indicator {
+            min-width: 108px;
+            text-align: center;
+            color: #475569;
+            font-size: 13px;
+        }
+
+        .book-stage {
+            position: relative;
+            padding: 8px;
+            flex: 1;
+            min-height: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 2400px;
+            background: #ccc;
+            overflow: hidden;
+        }
+
+        #flipbook {
+            width: 100%;
+            height: 100%;
+            min-height: 0;
+            transform: translateZ(0);
+            will-change: transform;
+        }
+
+        #flipbook .stf__parent,
+        #flipbook .stf__wrapper,
+        #flipbook .stf__block {
+            transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
+        }
+
+        .page {
+            background: #fff;
+            border: 1px solid var(--paper-edge);
+            box-shadow:
+                inset 0 0 0 1px rgba(255, 255, 255, 0.95),
+                0 14px 34px var(--paper-shadow);
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            overflow: hidden;
+            transform: translateZ(0);
+        }
+
+        .page.cover {
+            border-color: #c6ccd4;
+            box-shadow:
+                inset 0 0 0 1px rgba(255, 255, 255, 0.97),
+                0 18px 38px rgba(15, 23, 42, 0.35);
+        }
+
+        .page img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            display: block;
+            background: #fff;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            background: rgba(255, 255, 255, 0.78);
+            color: #0f172a;
+            font-size: 15px;
+            z-index: 20;
+            transition: opacity 0.25s ease;
+        }
+
+        .overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .status {
+            color: #64748b;
+            font-size: 12px;
+            margin-left: 4px;
+        }
+
+        @media (max-width: 760px) {
+            .book-stage {
+                padding: 4px;
+            }
+
+            #flipbook {
+                height: 100%;
+            }
+
+            .page-indicator {
+                min-width: 84px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="container main-menu">
+            <div class="row align-items-center d-flex">
+                <div class="header-bar">
+                    <div id="logo">
+                        <a href="index.html">
+                            <img style="cursor: pointer;" class="avatar" src="./img/logo.png" alt="Logo" />
+                        </a>
+                    </div>
+                    <div class="header-controls">
+                        <button id="prevBtn" type="button" aria-label="Previous page">Prev</button>
+                        <div class="page-indicator" id="pageIndicator">Page 0 / 0</div>
+                        <button id="nextBtn" type="button" aria-label="Next page">Next</button>
+                        <a class="download-link" href="assets/Resume_Prabhu.pdf" download>Download PDF</a>
+                        <span class="status" hidden id="statusText"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="app">
+        <section class="book-stage">
+            <div id="flipbook"></div>
+            <div class="overlay" id="loadingOverlay">Rendering pages...</div>
+        </section>
+    </main>
+
+    <script>
+        const pdfUrl = "assets/Resume_Prabhu.pdf";
+
+        pdfjsLib.GlobalWorkerOptions.workerSrc =
+            "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+        const flipbookEl = document.getElementById("flipbook");
+        const overlayEl = document.getElementById("loadingOverlay");
+        const stageEl = document.querySelector(".book-stage");
+        const indicatorEl = document.getElementById("pageIndicator");
+        const statusEl = document.getElementById("statusText");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+
+        let pageFlip;
+        let pageImages = [];
+        let pageRatio = 1.414;
+        let sourcePageWidth = 560;
+        let sourcePageHeight = 792;
+
+        function setStatus(text) {
+            statusEl.textContent = text;
+        }
+
+        function updateControls() {
+            if (!pageFlip) return;
+
+            const current = pageFlip.getCurrentPageIndex() + 1;
+            const total = pageFlip.getPageCount();
+            indicatorEl.textContent = `Page ${current} / ${total}`;
+
+            prevBtn.disabled = current <= 1;
+            nextBtn.disabled = current >= total;
+        }
+
+        function buildPageElement(imageDataUrl, pageNumber, totalPages) {
+            const page = document.createElement("div");
+            page.className = "page";
+
+            if (pageNumber === 1 || pageNumber === totalPages) {
+                page.classList.add("cover");
+                page.dataset.density = "hard";
+            } else {
+                page.dataset.density = "soft";
+            }
+
+            const img = document.createElement("img");
+            img.src = imageDataUrl;
+            img.alt = `Resume page ${pageNumber}`;
+            img.loading = "eager";
+            img.decoding = "sync";
+
+            page.appendChild(img);
+            return page;
+        }
+
+        function getFlipOptions() {
+            const common = {
+                maxShadowOpacity: 0.52,
+                drawShadow: true,
+                showCover: true,
+                flippingTime: 1050,
+                usePortrait: true,
+                startZIndex: 12,
+                mobileScrollSupport: false,
+                showPageCorners: true,
+                swipeDistance: 22,
+                clickEventForward: true
+            };
+
+            const stageRect = stageEl.getBoundingClientRect();
+            const usableWidth = Math.max(320, Math.floor(stageRect.width - 16));
+            const usableHeight = Math.max(380, Math.floor(stageRect.height - 16));
+            const maxPageWidthByViewport = Math.floor(usableWidth / 2);
+            const maxPageWidthByHeight = Math.floor(usableHeight / pageRatio);
+            const targetMaxWidth = Math.max(260, Math.min(maxPageWidthByViewport, maxPageWidthByHeight));
+
+            return {
+                ...common,
+                width: sourcePageWidth,
+                height: sourcePageHeight,
+                size: "stretch",
+                minWidth: 260,
+                maxWidth: targetMaxWidth,
+                minHeight: Math.round(260 * pageRatio),
+                maxHeight: Math.max(Math.round(260 * pageRatio), usableHeight),
+                autoSize: true
+            };
+        }
+
+        function mountFlipbook() {
+            const currentIndex = pageFlip ? pageFlip.getCurrentPageIndex() : 0;
+
+            if (pageFlip) {
+                pageFlip.destroy();
+                flipbookEl.innerHTML = "";
+            }
+
+            const options = getFlipOptions();
+            pageFlip = new St.PageFlip(flipbookEl, options);
+
+            const pages = pageImages.map((img, idx) =>
+                buildPageElement(img, idx + 1, pageImages.length)
+            );
+
+            pageFlip.loadFromHTML(pages);
+            if (currentIndex > 0) {
+                pageFlip.turnToPage(currentIndex);
+            }
+            pageFlip.on("flip", updateControls);
+            pageFlip.on("changeState", () => {
+                const state = pageFlip.getState();
+                setStatus(state === "flipping" ? "Flipping..." : "");
+            });
+
+            updateControls();
+        }
+
+        async function renderPdfToPages(pdf) {
+            const pages = [];
+            const totalPages = pdf.numPages;
+
+            const renderScale = Math.min(window.devicePixelRatio || 1.5, 2);
+
+            for (let i = 1; i <= totalPages; i += 1) {
+                setStatus(`Rendering ${i}/${totalPages}`);
+
+                const page = await pdf.getPage(i);
+                const viewport = page.getViewport({ scale: renderScale * 1.45 });
+
+                const canvas = document.createElement("canvas");
+                const ctx = canvas.getContext("2d", { alpha: false });
+
+                canvas.width = Math.floor(viewport.width);
+                canvas.height = Math.floor(viewport.height);
+
+                await page.render({
+                    canvasContext: ctx,
+                    viewport,
+                    intent: "display"
+                }).promise;
+
+                const dataUrl = canvas.toDataURL("image/jpeg", 0.96);
+                pages.push(dataUrl);
+            }
+
+            return pages;
+        }
+
+        async function initFlipbook() {
+            try {
+                setStatus("Loading PDF...");
+
+                const pdf = await pdfjsLib.getDocument(pdfUrl).promise;
+                const firstPage = await pdf.getPage(1);
+                const firstViewport = firstPage.getViewport({ scale: 1 });
+
+                sourcePageWidth = Math.round(firstViewport.width);
+                sourcePageHeight = Math.round(firstViewport.height);
+                pageRatio = sourcePageHeight / sourcePageWidth;
+
+                pageImages = await renderPdfToPages(pdf);
+                mountFlipbook();
+
+                overlayEl.classList.add("hidden");
+                setStatus("");
+                updateControls();
+            } catch (error) {
+                console.error(error);
+                overlayEl.textContent = "Failed to load resume. Please refresh.";
+                setStatus("Load failed");
+            }
+        }
+
+        prevBtn.addEventListener("click", () => {
+            if (pageFlip) pageFlip.flipPrev();
+        });
+
+        nextBtn.addEventListener("click", () => {
+            if (pageFlip) pageFlip.flipNext();
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (!pageFlip) return;
+
+            if (event.key === "ArrowLeft") pageFlip.flipPrev();
+            if (event.key === "ArrowRight") pageFlip.flipNext();
+        });
+
+        window.addEventListener("resize", () => {
+            if (!pageImages.length) return;
+            mountFlipbook();
+        });
+
+        initFlipbook();
+    </script>
+</body>
+
+</html>
