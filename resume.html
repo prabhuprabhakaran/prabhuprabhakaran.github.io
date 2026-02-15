@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prabhu Prabhakaran's Resume</title>
 
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/theme/theme-toggle.css">
     <script src="https://unpkg.com/page-flip/dist/js/page-flip.browser.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
@@ -31,8 +35,8 @@
             margin: 0;
             height: 100vh;
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            color: #0f172a;
-            background: #ffffff;
+            color: var(--text-main);
+            background: var(--page-bg);
             overflow-y: hidden;
             overflow-x: hidden;
         }
@@ -41,9 +45,31 @@
             width: 100vw;
             height: 100vh;
             padding-top: 60px;
-            background: #ffffff;
+            background: var(--page-bg);
             display: flex;
             flex-direction: column;
+        }
+
+        body.theme-light {
+            --page-bg: #ffffff;
+            --panel-bg: #ffffff;
+            --panel-soft: #f8fafc;
+            --panel-border: #cbd5e1;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --stage-bg: #e2e8f0;
+            --overlay-bg: rgba(255, 255, 255, 0.78);
+        }
+
+        body.theme-dark {
+            --page-bg: #181a1b;
+            --panel-bg: #111827;
+            --panel-soft: #1f2937;
+            --panel-border: #374151;
+            --text-main: #e5e7eb;
+            --text-muted: #cbd5e1;
+            --stage-bg: #0f172a;
+            --overlay-bg: rgba(17, 24, 39, 0.72);
         }
 
         .main-menu {
@@ -58,8 +84,8 @@
             right: 0;
             z-index: 997;
             transition: ease-in-out 1s;
-            border-bottom: 1px solid #e2e8f0;
-            background: #ffffff;
+            border-bottom: 1px solid var(--panel-border);
+            background: var(--panel-bg);
         }
 
         #logo {
@@ -99,9 +125,9 @@
         button,
         select,
         .download-link {
-            border: 1px solid #cbd5e1;
-            background: #f8fafc;
-            color: #0f172a;
+            border: 1px solid var(--panel-border);
+            background: var(--panel-soft);
+            color: var(--text-main);
             padding: 7px 11px;
             font-size: 13px;
             border-radius: 10px;
@@ -152,7 +178,7 @@
         .page-indicator {
             min-width: 108px;
             text-align: center;
-            color: #475569;
+            color: var(--text-muted);
             font-size: 13px;
         }
 
@@ -165,7 +191,7 @@
             align-items: center;
             justify-content: center;
             perspective: 3200px;
-            background: #ccc;
+            background: var(--stage-bg);
             overflow: hidden;
         }
 
@@ -220,8 +246,8 @@
             inset: 0;
             display: grid;
             place-items: center;
-            background: rgba(255, 255, 255, 0.78);
-            color: #0f172a;
+            background: var(--overlay-bg);
+            color: var(--text-main);
             font-size: 15px;
             z-index: 20;
             transition: opacity 0.25s ease;
@@ -233,7 +259,7 @@
         }
 
         .status {
-            color: #64748b;
+            color: var(--text-muted);
             font-size: 12px;
             margin-left: 4px;
         }
@@ -254,7 +280,11 @@
     </style>
 </head>
 
-<body>
+<body class="theme-dark">
+    <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle dark/light mode">
+        <span id="themeToggleIcon" class="fa fa-light fa-moon"></span>
+    </button>
+
     <header id="header">
         <div class="container main-menu">
             <div class="row align-items-center d-flex">
@@ -470,6 +500,25 @@
             if (!pageImages.length) return;
             mountFlipbook();
         });
+
+        // Theme toggle logic
+        const themeBtn = document.getElementById("themeToggleBtn");
+        const themeIcon = document.getElementById("themeToggleIcon");
+        function setTheme(theme) {
+            document.body.classList.remove("theme-light", "theme-dark");
+            document.body.classList.add(theme);
+            themeIcon.className = theme === "theme-dark" ? "fa fa-light fa-sun" : "fa fa-light fa-moon";
+            localStorage.setItem("theme", theme);
+        }
+        themeBtn.addEventListener("click", () => {
+            const current = document.body.classList.contains("theme-dark") ? "theme-dark" : "theme-light";
+            setTheme(current === "theme-dark" ? "theme-light" : "theme-dark");
+        });
+        (function () {
+            const saved = localStorage.getItem("theme");
+            if (saved === "theme-dark" || saved === "theme-light") setTheme(saved);
+            else setTheme("theme-light");
+        })();
 
         initFlipbook();
     </script>
