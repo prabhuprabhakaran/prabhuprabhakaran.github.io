@@ -150,7 +150,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            perspective: 2400px;
+            perspective: 3200px;
             background: #ccc;
             overflow: hidden;
         }
@@ -173,6 +173,7 @@
         .page {
             background: #fff;
             border: 1px solid var(--paper-edge);
+            border-radius: 2px;
             box-shadow:
                 inset 0 0 0 1px rgba(255, 255, 255, 0.95),
                 0 14px 34px var(--paper-shadow);
@@ -306,13 +307,7 @@
         function buildPageElement(imageDataUrl, pageNumber, totalPages) {
             const page = document.createElement("div");
             page.className = "page";
-
-            if (pageNumber === 1 || pageNumber === totalPages) {
-                page.classList.add("cover");
-                page.dataset.density = "hard";
-            } else {
-                page.dataset.density = "soft";
-            }
+            page.dataset.density = "soft";
 
             const img = document.createElement("img");
             img.src = imageDataUrl;
@@ -326,10 +321,10 @@
 
         function getFlipOptions() {
             const common = {
-                maxShadowOpacity: 0.52,
+                maxShadowOpacity: 0.42,
                 drawShadow: true,
-                showCover: true,
-                flippingTime: 1050,
+                showCover: false,
+                flippingTime: 1200,
                 usePortrait: true,
                 startZIndex: 12,
                 mobileScrollSupport: false,
